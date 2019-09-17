@@ -1,0 +1,185 @@
+
+/*=== FONTS ===*/
+/* QuestaGrande */
+@font-face {
+    font-family: 'QuestaSlab-Regular';
+    src: url('../fonts/QuestaSlab-Regular.eot');
+    src: url('../fonts/QuestaSlab-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/QuestaSlab-Regular.ttf') format('truetype'),
+    url('../fonts/QuestaSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ProximaNova */
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url('../fonts/ProximaNova-Regular.eot');
+    src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Regular.ttf') format('truetype'),
+    url('../fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Extrabld';
+    src: url('../fonts/ProximaNova-Extrabld.eot');
+    src: url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Extrabld.ttf') format('truetype'),
+    url('../fonts/ProximaNova-Extrabld.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../fonts/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Bold.ttf') format('truetype'),
+    url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+body {
+    font-size: 16px;
+    font-family: 'ProximaNova-Regular', sans-serif;
+}
+
+/*=== HOMEPAGE ===*/
+
+/* Carousel*/
+.carousel-control-next, .carousel-control-prev {
+    width: 5%
+}
+
+#carouselHome .carousel-item {
+    background-size: cover;
+    background-position: center;
+    min-height: 950px;
+    color: #ffffff;
+}
+
+#carouselHome .carousel-item .carousel-caption {
+    width: 100%;
+    right: 0%;
+    left: 0%;
+    bottom: 350px;
+    padding: 30px 0px;
+    background : #000000;
+    opacity: 0.4;
+}
+
+#carouselHome .carousel-item .carousel-caption .infos {
+    font-size: 0.875em;
+}
+
+#carouselHome .carousel-item .carousel-caption h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 900;
+    color: #fff;
+    padding: 10px 0px;
+    margin: 0px;
+}
+
+#carouselHome .carousel-item .carousel-caption p {
+    font-size: 1.125em;
+}
+
+#carouselHome .carousel-item .carousel-caption .buttons {
+    margin-top: 35px;
+}
+
+/* Topics bloc */
+#topics .row div {
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    color: #ffffff;
+}
+
+#topics .row div h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 900;
+    position: absolute;
+    bottom: 0px;
+    margin-left: -15px;
+    width: 100%;
+}
+
+#topics .row div h3 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Latests posts bloc */
+#latestsPosts .row div {
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    color: #ffffff;
+}
+
+#latestsPosts .row div .details {
+    display: none;
+}
+
+#latestsPosts .row div.active .details {
+    display: block;
+}
+
+
+/*=== UTILITAIRES===*/
+h2 {
+    font-size: 3.25em;
+    color: #000000;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+p {
+    color: grey;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    margin: 70px auto;
+}
+
+.container-medium {
+    width: 60%;
+    max-width: 60%;
+}
+
+.container-large {
+    width: 75%%;
+    max-width: 75%;
+}
+
+.container-full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+.btn-rond {
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: .875em;
+    border-radius: 30px;
+    padding: 0 25px;
+    white-space: normal;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+
+
+
+
