@@ -6,67 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
     <title>WeTrail</title>
 </head>
 <body>
 
-<div class="fixed-top navbar navbar-light bg-light navbar-static-top navbar-expand-md">
+<div class="overlay"></div>
+
+<div class="fixed-top navbar navbar-light bg-white navbar-static-top navbar-expand-md">
     <div class="container container-large menu">
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">☰</button>
         <a class="navbar-brand" href="/">
             <img src="images/logo.png" alt="weTrail">
         </a>
-        <div class="navbar-collapse collapse navbar-right">
+        <div id="navbarCollapse" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
                 <li class="dropdown menu-large nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Trails</a>
                     <ul class="dropdown-menu megamenu">
-                        <li class="dropdown-item">
+                        <li class="dropdown-item container container-large no-margin">
                             <div class="row">
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/textile.jpg" />
-                                            <span>Textile</span>
+                                            <span>Parcours</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
-                                        <div class="button">
-                                             <div class="btn-rond black">Découvrir nos avis</div>
-                                        </div>
                                     </div></div>
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/chaussure.jpg" />
-                                            <span>Chaussures</span>
+                                            <span>Courses</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
-                                        <div class="button">
-                                            <div class="btn-rond black">Découvrir nos avis</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 text-center">
-                                    <div class="card">
-                                        <a href="#" class="thumbnail">
-                                            <img alt="" src="images/technologie.jpg" />
-                                            <span>Technologie</span>
-                                        </a>
-                                        <div class="button">
-                                            <div class="btn-rond black">Découvrir nos avis</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 text-center">
-                                    <div class="card">
-                                        <a href="#" class="thumbnail">
-                                            <img alt="" src="images/accessoires.jpg" />
-                                            <span>Accessoires</span>
-                                        </a>
-                                        <div class="button">
-                                            <div class="btn-rond black">Découvrir nos avis</div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -76,12 +56,16 @@
                 <li class="dropdown menu-large nav-item">
                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Équipement</a>
                     <ul class="dropdown-menu megamenu">
-                        <li class="dropdown-item">
+                        <li class="dropdown-item container container-large no-margin">
                             <div class="row">
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/deadlift.jpg" />
+                                            <span>Textile</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -89,6 +73,10 @@
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/traileur.jpg" />
+                                            <span>Chaussures</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -96,6 +84,10 @@
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/trail_bag.jpg" />
+                                            <span>Technologie</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -103,6 +95,10 @@
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/trail_soleil.jpg" />
+                                            <span>Accessoires</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -110,14 +106,18 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown menu-large nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Entrainements </a>
+                <li class="dropdown menu-large nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Entrainement</a>
                     <ul class="dropdown-menu megamenu">
-                        <li class="dropdown-item">
+                        <li class="dropdown-item container container-large no-margin">
                             <div class="row">
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/textile.jpg" />
+                                            <span>Séances</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -125,6 +125,10 @@
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/chaussure.jpg" />
+                                            <span>Renforcement musculaire</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -132,6 +136,10 @@
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/technologie.jpg" />
+                                            <span>Récupération</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -139,6 +147,10 @@
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/accessoires.jpg" />
+                                            <span>Étirements / Yoga</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -146,14 +158,18 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown menu-large nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Alimentations </a>
+                <li class="dropdown menu-large nav-item"> <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Alimentation</a>
                     <ul class="dropdown-menu megamenu">
-                        <li class="dropdown-item">
+                        <li class="dropdown-item container container-large no-margin">
                             <div class="row">
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/deadlift.jpg" />
+                                            <span>Recettes spéciales trail</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -161,20 +177,10 @@
                                     <div class="card">
                                         <a href="#" class="thumbnail">
                                             <img alt="" src="images/traileur.jpg" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 text-center">
-                                    <div class="card">
-                                        <a href="#" class="thumbnail">
-                                            <img alt="" src="images/trail_bag.jpg" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-3 text-center">
-                                    <div class="card">
-                                        <a href="#" class="thumbnail">
-                                            <img alt="" src="images/trail_soleil.jpg" />
+                                            <span>Nutrition</span>
+                                            <div class="button">
+                                                <div class="btn-rond black">Découvrir nos avis</div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
@@ -234,21 +240,29 @@
 <div id="topics" class="container container-large">
     <h2>Sujets</h2>
     <div class="row">
-        <div class="topic-item col-12 col-sm-6 col-xl-3" style="background-image: url('images/light_stairs_nature.jpg');">
-            <div class="content"></div>
-            <h3><a href="#">Trails</a></h3>
+        <div class="topic-item col-12 col-sm-6 col-xl-3">
+            <a href="#" class="thumbnail">
+                <img alt="" src="images/light_stairs_nature.jpg" />
+                <span>Trails</span>
+            </a>
         </div>
-        <div class="topic-item col-12 col-sm-6 col-xl-3" style="background-image: url('images/trail_bag.jpg');">
-            <div class="content"></div>
-            <h3><a href="#">Équipements</a></h3>
+        <div class="topic-item col-12 col-sm-6 col-xl-3">
+            <a href="#" class="thumbnail">
+                <img alt="" src="images/trail_bag.jpg" />
+                <span>Équipements</span>
+            </a>
         </div>
-        <div class="topic-item col-12 col-sm-6 col-xl-3" style="background-image: url('images/deadlift.jpg');">
-            <div class="content"></div>
-            <h3><a href="#">Entrainements</a></h3>
+        <div class="topic-item col-12 col-sm-6 col-xl-3">
+            <a href="#" class="thumbnail">
+                <img alt="" src="images/deadlift.jpg" />
+                <span>Entrainements</span>
+            </a>
         </div>
-        <div class="topic-item col-12 col-sm-6 col-xl-3" style="background-image: url('images/healthy_food.jpg');">
-            <div class="content"></div>
-            <h3><a href="#">Alimentation</a></h3>
+        <div class="topic-item col-12 col-sm-6 col-xl-3">
+            <a href="#" class="thumbnail">
+                <img alt="" src="images/healthy_food.jpg" />
+                <span>Alimentation</span>
+            </a>
         </div>
     </div>
 </div>
@@ -316,9 +330,9 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js" ></script>
 <script src="js/script.js"></script>
 </body>
 </html>
