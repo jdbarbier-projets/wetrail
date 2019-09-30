@@ -2,6 +2,8 @@
 @black: #000000;
 @greyblack : #383838;
 @lightgrey: grey;
+@verylightgrey : lightgrey;
+@green : #9FD659;
 @greyopacity: rgba(0,0,0,0.4);
 @greyOverlayOpacity: rgba(100, 100, 100, 0.5);
 @ProximaNova: 'ProximaNova-Regular', sans-serif;
@@ -10,13 +12,17 @@
 @veryLightGradient :linear-gradient(180deg,transparent 10%,rgba(0,0,0,0.1) 50%, transparent 90%);
 @blackGradient : linear-gradient(180deg, transparent, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, .6) 100%);
 @ProximaNovaBolder: 'ProximaNova-Extrabld', sans-serif;
-@tablet:         ~"only screen and (max-width: 1366px)";
-@tabletportrait: ~"only screen and (max-width: 1024px)";
-@mobile:         ~"only screen and (max-width: 768px)";
-@mobileportrait: ~"only screen and (max-width: 566px)";
+@laptop:             ~"only screen and (max-width: 1365.98px)";
+@tablet:             ~"only screen and (max-width: 1199.98px)";
+@tabletportrait:     ~"only screen and (max-width: 991.98px)";
+@mobile:             ~"only screen and (max-width: 767.98px)";
+@mobileportrait:     ~"only screen and (max-width: 575.98px)";
+@tablet-and-desktop: ~"only screen and (min-width: 1024px)";
 @transition-ease: all 0.5s ease;
 @transition-visibility-linear : visibility 0s, opacity 0.3s linear;
 @box-shadow-light : 0 10px 10px -10px rgba(0,0,0,0.4);
+@box-shadow-filter-bars : 0 5px 5px rgba(0, 0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1), 5px 0px 5px rgba(0, 0, 0, 0.1);
+@box-shadow-news : 0 4px 19px 0 rgba(58,58,60,0.25);
 @color1: #dddddd; // Appears 2 times
 @color2: #333333; // Appears 2 times
 
@@ -53,29 +59,42 @@ body {
   min-height: 100%;
 }
 
-
-
-/*=== HOMEPAGE ===*/
 /* Menu */
 .fixed-top.navbar {
   padding: 0px;
   box-shadow: @box-shadow-light;
+  .navbar-toggler {
+    border: none;
+    padding: 25px;
+  }
   .container.menu {
     height: 80px;
+    @media @tabletportrait {
+      height: 70px;
+    }
     margin: 0px auto;
     .navbar-right {
+      background-color: @white;
       justify-content: flex-end;
       .navbar-nav {
+        @media @tabletportrait {
+          height: 100vh;
+        }
         .nav-item {
           position: static !important;
           line-height: 80px;
+          @media @tabletportrait {
+            line-height: 60px;
+            border-bottom: 1px solid lightgrey;
+          }
 
           .nav-link {
             color: @greyblack;
             font-family: @ProximaNovaBold;
             padding: 0px 30px;
+            font-size: 1.125em;
 
-            &:hover, &:focus, &:active {
+            &:hover {
               color: @lightgrey;
             }
           }
@@ -95,6 +114,10 @@ body {
           margin: -1px 0px 0px 0px;
           border: none;
           box-shadow: @box-shadow-light;
+          @media @tabletportrait {
+            padding: 0px 0px 20px 60px;
+            box-shadow: none;
+          }
 
           .dropdown-item {
             margin: 0px auto;
@@ -106,13 +129,18 @@ body {
                 border: none;
                 max-height: 400px;
                 overflow: hidden;
+                @media @tabletportrait {
+                  padding: 12px 0px;
+                }
 
                 .thumbnail {
                   img {
                     height: 400px;
                     width: 100%;
-                    object-fit: cover;
                     transition: @transition-ease;
+                    @media @tabletportrait {
+                      display: none;
+                    }
 
                     &:hover {
                       transform: scale(1.1);
@@ -125,16 +153,21 @@ body {
                     position: absolute;
                     bottom: 60%;
                     text-align: center;
-                    color: white;
+                    color: @white;
+                    @media @tabletportrait {
+                      color: @lightgrey;
+                      position: relative;
+                      font-size: 1em;
+                      height: 1em;
+                      background: none;
+                      text-align: left;
+                    }
                     display: block;
                     width: 100%;
                     background: @veryLightGradient;
                     white-space: pre-wrap;
                     line-height: 1em;
                     height: 2em;
-                    @media @mobile {
-                      font-size: 1.5em;
-                    }
                   }
 
                   .button {
@@ -148,8 +181,8 @@ body {
                     color: white;
                     width: 100%;
                     transition: @transition-visibility-linear;
-                    @media @mobile {
-                      font-size: 0.75em;
+                    @media @tabletportrait {
+                      display: none;
                     }
                   }
 
@@ -175,7 +208,7 @@ body {
           }
         }
 
-        @media @mobile {
+        @media @tabletportrait {
           .megamenu {
             margin-left: 0;
             margin-right: 0;
@@ -196,19 +229,43 @@ body {
   }
 }
 
+/* Footer */
+.page-footer {
+  color: @lightgrey;
+  font-size: 0.875em;
+  a {
+    color: @lightgrey;
+  }
+  .col-item {
+    h5 {
+      text-align: left;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: @greyblack;
+    }
+  }
+}
 
 
+/*=== HOMEPAGE ===*/
 /* Carousel*/
 #carouselHome {
   .carousel-item {
     background-size: cover;
     background-position: center;
-    min-height: 950px;
+    height: 100vh;
+    transition: all 1s ease-out;
     .carousel-caption {
       width: 100%;
       right: 0%;
       left: 0%;
-      bottom: 350px;
+      bottom: 35%;
+      @media @tablet {
+        bottom: 30%;
+      }
+      @media @mobile {
+        bottom: 15%;
+      }
       padding: 30px 0px;
       @media @mobile {
         padding: 30px;
@@ -242,6 +299,27 @@ body {
   }
   .carousel-control-next, .carousel-control-prev {
     width: 5%;
+    z-index: 10;
+    @media @mobile {
+      display: none;
+    }
+  }
+}
+
+/* Presentation */
+.container.presentation {
+  margin: 80px auto 120px auto;
+  text-align: center;
+  .presentation-image {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    margin-bottom: 40px;
+  }
+  p {
+    margin-bottom: 30px;
+    line-height: 1.75em;
+    font-size: 1.25em;
   }
 }
 
@@ -255,8 +333,10 @@ body {
    .thumbnail {
      img {
        height: 600px;
+       @media @tablet {
+         height: 300px;
+       }
        width: 100%;
-       object-fit: cover;
        transition: @transition-ease;
 
        &:hover {
@@ -269,6 +349,9 @@ body {
        font-family: @ProximaNovaBolder;
        position: absolute;
        bottom: 10%;
+       @media @mobile {
+         bottom: 40%;
+       }
        text-align: center;
        color: white;
        display: block;
@@ -297,6 +380,9 @@ body {
       background-size: cover;
       background-position: center;
       min-height: 500px;
+      @media @mobile {
+        min-height: 400px;
+      }
       color: @white;
       display: flex;
       flex-direction: column;
@@ -314,13 +400,15 @@ body {
         }
         padding: 5px 5px 20px 25px;
         display: none;
-        @media @mobile {
+        @media @tablet {
           display: block;
         }
         color: @white;
         h3{
           margin-bottom: 0px;
           text-align: left;
+          line-height: 1em;
+          font-size: 3em;
           a {
             &:before {
               content: " ";
@@ -336,6 +424,7 @@ body {
         }
         p {
           font-size: 1.5em;
+          line-height: 1.125em;
           @media @mobile {
             font-size: 1.125em;
           }
@@ -345,11 +434,168 @@ body {
   }
 }
 
-/*=== UTILITAIRES===*/
+
+/*=== Page LISTE ARTICLES ===*/
+#articlesList {
+  .header-cover {
+    height: 75vh;
+    padding: 0px;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    h1 {
+      position: absolute;
+      bottom: 25%;
+      width: 100%;
+      color: @white;
+    }
+
+    .articles-filters {
+      position: absolute;
+      bottom: -20px;
+      width: 100% !important;
+      max-width: 100% !important;
+      text-align: center;
+      margin: 0px;
+
+      ul {
+        background-color : @white;
+        box-shadow: @box-shadow-filter-bars;
+        padding: 0px;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        li {
+          padding: 0px;
+
+          a {
+            text-transform: uppercase;
+            color: @greyblack;
+            padding: 30px 20px;
+            font-family: @ProximaNovaBold;
+            font-size: 1em;
+            line-height: 1em;
+            display: inline-block;
+
+            &.active, &:hover, &:focus, &:active {
+              border-bottom: 2px solid @green;
+            }
+          }
+        }
+        &.container-large {
+          margin: 0px auto;
+        }
+      }
+    }
+  }
+  .news-list {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      .col-news {
+        padding-right: 8px;
+        padding-left: 8px;
+        margin-bottom: 50px;
+        .news-item {
+          position: relative;
+          height: 100%;
+
+          .thumbnail-content {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+              height: 250px;
+              width: 100%;
+              transition: @transition-ease;
+
+              &.hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+
+          .news-content {
+            color: @verylightgrey;
+            padding: 10px 10px 20px 10px;
+
+            .infos {
+              text-transform: uppercase;
+              font-family: @ProximaNovaBold;
+              padding: 20px 0px;
+              font-size: 0.875em;
+            }
+
+            a {
+              color: @greyblack;
+              font-size: 1.375em;
+              font-family: @ProximaNovaBolder;
+
+              &:before {
+                content: " ";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100% !important;
+                width: 100% !important;
+                display: block;
+                z-index: 4;
+              }
+            }
+
+            .description {
+              font-size: 0.875em;
+              padding: 7px 0px 10px 0px;
+              line-height: 1.75em;
+              height: 6em;
+              overflow: hidden;
+            }
+
+            .more {
+              color: @greyblack;
+              font-size: 0.875em;
+              text-transform: uppercase;
+              font-family: @ProximaNovaBold;
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+            }
+          }
+
+          &.hover {
+            box-shadow: @box-shadow-news;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===================*/
+/*=== UTILITAIRES ===*/
+/*===================*/
 h1, h2, h3, h4, h5 {
   text-align: center;
   margin-bottom: 20px;
   font-family: @ProximaNovaBolder;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 4.5em;
+  @media @tablet {
+    font-size: 3em;
+  }
+  @media @mobile {
+    font-size: 2em;
+  }
 }
 
 h2 {
@@ -362,7 +608,7 @@ h2 {
     font-size: 3em;
   }
   @media @mobile {
-    font-size: 2.5em;
+    font-size: 2.125em;
   }
 }
 
@@ -376,8 +622,12 @@ h3 {
     font-size: 2.5em;
   }
   @media @mobile {
-    font-size: 2em;
+    font-size: 1.75em;
   }
+}
+
+h5 {
+  font-family: @ProximaNovaBold;
 }
 
 a {
@@ -401,7 +651,7 @@ p {
   display:none;
 }
 .show{
-  display:block
+  display: block;
 }
 
 .container {
@@ -428,15 +678,38 @@ p {
 .container-large {
   width: 75%;
   max-width: 75%;
+  @media @tablet {
+    width: 90%;
+    max-width: 90%;
+  }
   @media @mobile {
     width: 100%;
     max-width: 100%;
   }
 }
+
+.container-full-width-laptop {
+  @media @laptop {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .container-full-width {
   width: 100%;
   max-width: 100%;
 }
+
+.margin-top-added {
+  margin-top: 140px;
+  @media @laptop {
+    margin-top: 120px;
+  }
+  @media @tablet {
+    margin-top: 100px;
+  }
+}
+
 .btn-rond {
   color: @white;
   border: 1px solid @white;
@@ -448,11 +721,13 @@ p {
   font-family: @ProximaNovaBold;
   width: auto;
   display: inline-block;
-}
-
-.btn-rond.black {
-  background-color: @greyblack;
-  border: 1px solid @greyblack;
+  &.padding-large {
+    padding: 5px 40px;
+  }
+  &.black {
+    background-color: @greyblack;
+    border: 1px solid @greyblack;
+  }
 }
 
 .btn:hover {
@@ -474,4 +749,18 @@ p {
     visibility: visible;
     opacity: 1;
   }
+}
+
+.img-cover {
+  object-fit: cover;
+}
+
+.opacity-filter {
+  width: 100%;
+  height: 100%;
+  background-color: @black;
+  filter: opacity(40%);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
