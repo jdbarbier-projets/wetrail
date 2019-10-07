@@ -11,10 +11,10 @@ $(document).ready(function(){
         $( this ).parent().parent().find( ".img-cover").toggleClass("hover" );
         $( this ).parent().parent().toggleClass("hover" );
     });
-    $('.news-list .news-item a').bind('touchstart touchend', function(e) {
+    /*$('.news-list .news-item a').bind('touchstart touchend', function(e) {
         $( this ).parent().parent().find( ".img-cover").toggleClass("hover" );
         $( this ).parent().parent().toggleClass("hover" );
-    });
+    });*/
 
     $('.nav-item').on('show.bs.dropdown', function () {
         $(".overlay").addClass("visible");

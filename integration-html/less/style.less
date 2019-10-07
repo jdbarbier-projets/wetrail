@@ -4,6 +4,9 @@
 @lightgrey: grey;
 @verylightgrey : lightgrey;
 @green : #9FD659;
+@weTrailColor : #FF1500;
+@weTrailGradient : linear-gradient(#FFAE46, #FF428D);
+@yellowGold : #ffae46;
 @greyopacity: rgba(0,0,0,0.4);
 @greyOverlayOpacity: rgba(100, 100, 100, 0.5);
 @ProximaNova: 'ProximaNova-Regular', sans-serif;
@@ -63,9 +66,24 @@ body {
 .fixed-top.navbar {
   padding: 0px;
   box-shadow: @box-shadow-light;
-  .navbar-toggler {
-    border: none;
-    padding: 25px;
+  >.container {
+    @media @tabletportrait {
+      display: block;
+    }
+    .navbar-toggler {
+      border: none;
+      padding: 25px;
+      color: @weTrailColor;
+      @media @tabletportrait {
+        float: right;
+      }
+    }
+    .navbar-brand {
+      @media @tabletportrait {
+        float: left;
+        padding: 13px 13px 13px 10%;
+      }
+    }
   }
   .container.menu {
     height: 80px;
@@ -233,6 +251,10 @@ body {
 .page-footer {
   color: @lightgrey;
   font-size: 0.875em;
+  @media @mobile {
+    width: 70%;
+    margin: 0px auto;
+  }
   a {
     color: @lightgrey;
   }
@@ -242,6 +264,12 @@ body {
       margin-top: 10px;
       margin-bottom: 5px;
       color: @greyblack;
+    }
+  }
+  .footer-copyright {
+    @media @mobile {
+      margin: 0px;
+      padding: 0px;
     }
   }
 }
@@ -461,6 +489,10 @@ body {
       max-width: 100% !important;
       text-align: center;
       margin: 0px;
+      @media @mobile {
+        bottom: -65px;
+        padding: 0px;
+      }
 
       ul {
         background-color : @white;
@@ -482,11 +514,23 @@ body {
             font-size: 1em;
             line-height: 1em;
             display: inline-block;
+            @media @tabletportrait {
+              font-size: 0.75em;
+              padding: 25px 10px;
+            }
 
             &.active, &:hover, &:focus, &:active {
               border-bottom: 2px solid @green;
+              @media @mobile {
+                border: none;
+                color: @yellowGold;
+              }
             }
           }
+        }
+        span {
+          height: 18px;
+          padding: 18px 0px 25px 0px;
         }
         &.container-large {
           margin: 0px auto;
@@ -502,13 +546,17 @@ body {
         padding-right: 8px;
         padding-left: 8px;
         margin-bottom: 50px;
+        &:first-child {
+          @media @mobile {
+            margin-top: 25px;
+          }
+        }
         .news-item {
           position: relative;
           height: 100%;
 
           .thumbnail-content {
             height: 250px;
-            width: 100%;
             overflow: hidden;
 
             img {
@@ -525,18 +573,36 @@ body {
           .news-content {
             color: @verylightgrey;
             padding: 10px 10px 20px 10px;
+            @media @mobile {
+              width: 90%;
+              margin: 0 auto;
+              box-shadow: @box-shadow-filter-bars;
+              padding: 15px;
+              margin-top: -30px;
+              position: relative;
+              background-color: @white;
+              text-align: center;
+            }
 
             .infos {
               text-transform: uppercase;
               font-family: @ProximaNovaBold;
               padding: 20px 0px;
               font-size: 0.875em;
+              @media @mobile {
+                padding: 2px 0px;
+                font-size: 0.75em;
+              }
             }
 
             a {
               color: @greyblack;
               font-size: 1.375em;
               font-family: @ProximaNovaBolder;
+              @media @mobile {
+                font-size: 1.125em;
+                font-family: @ProximaNovaBold;
+              }
 
               &:before {
                 content: " ";
@@ -556,6 +622,9 @@ body {
               line-height: 1.75em;
               height: 6em;
               overflow: hidden;
+              @media @mobile {
+                display: none;
+              }
             }
 
             .more {
@@ -566,6 +635,9 @@ body {
               position: absolute;
               bottom: 10px;
               right: 10px;
+              @media @mobile {
+                display: none;
+              }
             }
           }
 
