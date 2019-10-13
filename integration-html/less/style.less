@@ -1,11 +1,15 @@
 @white: #ffffff;
 @black: #000000;
 @greyblack : #383838;
+@greytext : #686868;
+@greyBackground : #E5E5E5;
 @lightgrey: grey;
 @verylightgrey : lightgrey;
+@progressbarGrey : #EAEAEA;
 @green : #9FD659;
 @weTrailColor : #FF1500;
-@weTrailGradient : linear-gradient(#FFAE46, #FF428D);
+@weTrailGradient : linear-gradient(to right, #FFAE46, #FF428D);
+@CoverLightGradient :linear-gradient(to bottom, transparent 0%, #000000 100%);
 @yellowGold : #ffae46;
 @greyopacity: rgba(0,0,0,0.4);
 @greyOverlayOpacity: rgba(100, 100, 100, 0.5);
@@ -86,7 +90,7 @@ body {
     }
   }
   .container.menu {
-    height: 80px;
+    height: 100px;
     @media @tabletportrait {
       height: 70px;
     }
@@ -110,7 +114,7 @@ body {
             color: @greyblack;
             font-family: @ProximaNovaBold;
             padding: 0px 30px;
-            font-size: 1.125em;
+            font-size: 1em;
 
             &:hover {
               color: @lightgrey;
@@ -464,7 +468,7 @@ body {
 
 
 /*=== Page LISTE ARTICLES ===*/
-#articlesList {
+.zones {
   .header-cover {
     height: 75vh;
     padding: 0px;
@@ -480,6 +484,31 @@ body {
       bottom: 25%;
       width: 100%;
       color: @white;
+    }
+
+    .testing-infos {
+      position: absolute;
+      bottom: 9%;
+      color: @white;
+      text-align: center;
+      width: 100%;
+      .infos {
+        font-size: 1.25em;
+      }
+      h1 {
+        position: relative;
+        text-transform: none;
+        font-size: 3.75em;
+        margin-bottom: 0px;
+        @media @mobile {
+          font-size: 2.25em;
+          padding: 0px 10px;
+        }
+      }
+      p {
+        font-size: 1.375em;
+        color: @white;
+      }
     }
 
     .articles-filters {
@@ -622,9 +651,6 @@ body {
               line-height: 1.75em;
               height: 6em;
               overflow: hidden;
-              @media @mobile {
-                display: none;
-              }
             }
 
             .more {
@@ -635,9 +661,6 @@ body {
               position: absolute;
               bottom: 10px;
               right: 10px;
-              @media @mobile {
-                display: none;
-              }
             }
           }
 
@@ -649,6 +672,274 @@ body {
     }
   }
 }
+
+
+/*=== Page TEST PRODUIT ===*/
+#testProduit {
+  .header-cover {
+    .mobile-score {
+      width: 100%;
+      margin-top: 20px;
+      .total-score {
+        position: relative;
+        margin: 0 auto;
+      }
+    }
+  }
+  .container.product-pictos {
+    margin: 0 auto;
+    box-shadow: @box-shadow-filter-bars;
+    @media @mobile {
+      padding: 0px 0px 0px 20px;
+    }
+
+    .container {
+      margin: 0 auto;
+      position: relative;
+      @media @mobile {
+        padding: 0px;
+        overflow-x: scroll;
+        width: 100%;
+      }
+
+      ul {
+        padding: 0px;
+        margin: 0px 15% 0px 0px;
+        height: 90px;
+        line-height: 90px;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: @greytext;
+        font-family: @ProximaNovaBold;
+        @media @mobile {
+          margin-right: 0px;
+          display: inline-block;
+          flex-wrap: nowrap;
+          width: 650px;
+        }
+
+        li {
+          @media @mobile {
+            display: inline-block;
+            padding-right: 20px;
+          }
+
+          img {
+            margin-right: 10px;
+
+            &.with-margin {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .summary {
+    .product {
+      position: relative;
+      background-color: @greyBackground;
+      h3 {
+        text-transform: uppercase;
+        font-family: @ProximaNovaBold;
+        font-size: 3.25em;
+        color: @greyblack;
+        margin: 130px 0px 0px 40%;
+        line-height: 1.625em;
+        text-align: left;
+        @media @mobile {
+          font-size: 2.25em;
+          margin: 30px 0px 0px 0px;
+        }
+      }
+      .total-score {
+        top: 0px;
+        right: -67px;
+        font-size: 0.75em;
+        font-family: @ProximaNovaBolder;
+        z-index: 999;
+        .note {
+          margin-top: 5px;
+          font-size: 4.25em;
+          line-height: 1em;
+        }
+      }
+    }
+    .full-score {
+      padding-right: 10%;
+      @media @mobile {
+        padding-right: 15px;
+      }
+      h3 {
+        margin-top: 50px;
+        color: @greyblack;
+        font-size: 3em;
+        @media @mobile {
+          font-size: 2.25em;
+        }
+      }
+      .score-details {
+        width: 90%;
+        margin: 0 auto;
+        @media @mobile {
+          width: 100%;
+        }
+        .score-item {
+          padding: 15px 0px;
+          .title {
+            text-align: right;
+            font-family: @ProximaNovaBold;
+            font-size: 1.125em;
+            @media @mobile {
+              font-size: 0.875em;
+            }
+          }
+          .progressbar {
+            height: 12px;
+            margin-top: 5px;
+            .progress {
+              border-radius: 10px;
+              background-color: @progressbarGrey;
+              box-shadow: @box-shadow-filter-bars;
+              .progress-bar {
+                background: @weTrailGradient;
+                border-radius: 10px;
+              }
+            }
+          }
+          .ranking {
+            font-family: @ProximaNovaBold;
+            font-size: 1.125em;
+            @media @mobile {
+              font-size: 0.875em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.total-score {
+  background: @weTrailGradient;
+  border-radius: 100%;
+  padding: 20px;
+  color: @white;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 135px;
+  height: 135px;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-family: @ProximaNovaBolder;
+  text-align: center;
+  @media @mobile {
+    padding: 10px;
+    width: 95px;
+    height: 95px;
+    font-size: 0.625em;
+  }
+
+  .text {
+    margin-top: 10px;
+    @media @mobile {
+      margin-top: 15px;
+    }
+  }
+
+  .note {
+    font-size: 4.25em;
+    line-height: 1em;
+    @media @mobile {
+      font-size: 3.25em;
+    }
+  }
+  &.black {
+    background: @greyblack;
+  }
+}
+
+.container-rich-text {
+  .introduction {
+    font-size: 1.125em;
+    color: @greyblack;
+    margin-bottom: 50px;
+    @media @mobile {
+      font-size: 0.875em;
+    }
+    p {
+      color: @greyblack;
+      font-size: 1.375em;
+    }
+  }
+  .content {
+    font-size: 0.875em;
+    @media @mobile {
+      font-size: 0.75em;
+    }
+    color: @greyblack;
+    p {
+      margin: 0px 0px 30px 0px;
+      line-height: 1.875em;
+    }
+    h2 {
+      font-size: 3.5em;
+      text-align: left;
+      color: @greyblack;
+      margin: 40px auto 15px auto;
+      @media @mobile {
+        font-size: 2.25em;
+      }
+    }
+    h3 {
+      font-size: 2.75em;
+      text-align: left;
+      color: @greyblack;
+      margin: 30px auto 10px auto;
+      @media @mobile {
+        font-size: 1.875em;
+      }
+    }
+    .object-img {
+      margin: auto -25%;
+      @media @mobile {
+        margin: auto -5%;
+      }
+    }
+
+    .carousel {
+      margin: auto -25%;
+      @media @mobile {
+        margin: auto -5%;
+      }
+      .image {
+        padding: 20px 10px 0px 10px;
+        img {
+          height: 300px;
+          @media @mobile {
+            height: auto;
+          }
+        }
+        &:first-child {
+          padding-right: 10px;
+          padding-left: 10px;
+          img {
+              height: 600px;
+            @media @mobile {
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 /*===================*/
 /*=== UTILITAIRES ===*/
@@ -747,6 +1038,17 @@ p {
     max-width: 100%;
   }
 }
+
+.container-rich-text {
+  width: 50%;
+  max-width: 50%;
+  @media @mobile {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+}
+
 .container-large {
   width: 75%;
   max-width: 75%;
@@ -835,4 +1137,8 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  &.light {
+    background: @CoverLightGradient;
+    filter: opacity(50%);
+  }
 }

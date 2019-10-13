@@ -5,7 +5,6 @@ $(document).ready(function(){
         $( this ).find( ".details").fadeToggle( "show hide", "linear" );
     });
 
-
     // Zoom effect on image and shadow effect on  bloc for new on hover & touch
     $(".news-list .news-item a").hover(function(){
         $( this ).parent().parent().find( ".img-cover").toggleClass("hover" );

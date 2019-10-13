@@ -53,12 +53,12 @@
                     <div class="news-content">
                         <div class="infos">Accessoire | 04/09/2019</div>
                         <a href="#">Test : Garmin Forerunner 645</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
@@ -70,12 +70,12 @@
                     <div class="news-content">
                         <div class="infos">Équipement | 04/09/2019</div>
                         <a href="#">Courir sous la pluie</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
@@ -87,12 +87,12 @@
                     <div class="news-content">
                         <div class="infos">Accessoire | 04/09/2019</div>
                         <a href="#">Le renforcement : est-ce vraiment une obligation ?</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
@@ -104,12 +104,12 @@
                     <div class="news-content">
                         <div class="infos">Accessoire | 04/09/2019</div>
                         <a href="#">Test : La nouvelle Garmin Forerunner 645</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
@@ -121,12 +121,12 @@
                     <div class="news-content">
                         <div class="infos">Équipement | 04/09/2019</div>
                         <a href="#">Courir sous la pluie</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
@@ -138,12 +138,12 @@
                     <div class="news-content">
                         <div class="infos">Accessoire | 04/09/2019</div>
                         <a href="#">Le renforcement : un obligation ?</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
@@ -155,12 +155,12 @@
                     <div class="news-content">
                         <div class="infos">Accessoire | 04/09/2019</div>
                         <a href="#">Test : Garmin Forerunner 645</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
@@ -172,12 +172,12 @@
                     <div class="news-content">
                         <div class="infos">Équipement | 04/09/2019</div>
                         <a href="#">Courir sous la pluie, bonne idée ou danger  pour votre corps ?</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
@@ -189,15 +189,18 @@
                     <div class="news-content">
                         <div class="infos">Accessoire | 04/09/2019</div>
                         <a href="#">Le renforcement : un obligation ?</a>
-                        <p class="description">
+                        <p class="description d-none d-md-block">
                             Duis rhoncus pharetra leo, id dapibus elit laoreet ac. Aenean rhoncus sed nunc at ornare. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
                             Suspendisse commodo consequat erat. Phasellus sit amet pretium sapien, vel aliquam metus. Nam luctus mauris maximus eros lacinia, maximus lacinia velit mattis.
                             Proin in turpis vel mi blandit aliquam in eu nisi.
                         </p>
-                        <div class="more">En savoir plus ></div>
+                        <div class="more d-none d-md-block">En savoir plus ></div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="buttons text-uppercase text-center">
+            <a href="#" class="btn btn-rond black padding-large">Afficher plus</a>
         </div>
     </div>
 </div>

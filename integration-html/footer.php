@@ -6,6 +6,7 @@
                     <img src="images/logo.png" alt="weTrail">
                 </a>
             </div>
+
             <div class="col-6 col-md-3 col-item">
                 <h5>Menu</h5>
                 <ul class="list-unstyled">

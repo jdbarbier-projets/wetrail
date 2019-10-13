@@ -4,7 +4,7 @@
     <div class="container container-large container-full-width-laptop menu">
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">☰</button>
         <a class="navbar-brand" href="/">
-            <img src="images/logo.png" alt="weTrail">
+            <img src="images/logo-we-trail.png" alt="weTrail">
         </a>
         <div id="navbarCollapse" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
