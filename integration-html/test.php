@@ -99,7 +99,7 @@
         <div class="row">
             <div class="product col-12 col-md-5">
                 <h3>Altra <br />Lone Peak</h3>
-                <div class="total-score black  d-none d-md-block">
+                <div class="total-score black d-none d-md-block">
                     <div class="note">9.2</div>
                     <div class="text">Note globale</div>
                 </div>

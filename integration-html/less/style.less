@@ -1,9 +1,10 @@
 @white: #ffffff;
 @black: #000000;
+@greyDark : #606060;
 @greyblack : #383838;
 @greytext : #686868;
 @greyBackground : #E5E5E5;
-@lightgrey: grey;
+@lightgrey: #919191;
 @verylightgrey : lightgrey;
 @progressbarGrey : #EAEAEA;
 @green : #9FD659;
@@ -13,12 +14,13 @@
 @yellowGold : #ffae46;
 @greyopacity: rgba(0,0,0,0.4);
 @greyOverlayOpacity: rgba(100, 100, 100, 0.5);
-@ProximaNova: 'ProximaNova-Regular', sans-serif;
-@ProximaNovaBold: 'ProximaNova-Bold', sans-serif;
 @blackLightGradient : linear-gradient(180deg,transparent,transparent 0%,rgba(0,0,0,0.5) 96%,rgba(0,0,0,0));
 @veryLightGradient :linear-gradient(180deg,transparent 10%,rgba(0,0,0,0.1) 50%, transparent 90%);
 @blackGradient : linear-gradient(180deg, transparent, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, .6) 100%);
+@ProximaNova: 'ProximaNova-Regular', sans-serif;
+@ProximaNovaBold: 'ProximaNova-Bold', sans-serif;
 @ProximaNovaBolder: 'ProximaNova-Extrabld', sans-serif;
+@QuestaGrande: 'QuestaGrande-Regular', sans-serif;
 @laptop:             ~"only screen and (max-width: 1365.98px)";
 @tablet:             ~"only screen and (max-width: 1199.98px)";
 @tabletportrait:     ~"only screen and (max-width: 991.98px)";
@@ -55,6 +57,15 @@
   src: url('../fonts/ProximaNova-Bold.eot');
   src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.ttf') format('truetype'), url('../fonts/ProximaNova-Bold.woff') format('woff');
   font-weight: bold;
+  font-style: normal;
+}
+
+/* QuestaGrande */
+@font-face {
+  font-family: 'QuestaGrande-Regular';
+  src: url('../fonts/QuestaGrande-Regular.eot');
+  src: url('../fonts/QuestaGrande-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/QuestaGrande-Regular.ttf') format('truetype'), url('../fonts/QuestaGrande-Regular.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -469,6 +480,7 @@ body {
 
 /*=== Page LISTE ARTICLES ===*/
 .zones {
+  margin-top: 100px;
   .header-cover {
     height: 75vh;
     padding: 0px;
@@ -479,11 +491,15 @@ body {
       width: 100%;
     }
 
-    h1 {
+    .bloc-infos {
       position: absolute;
       bottom: 25%;
       width: 100%;
       color: @white;
+      text-align: center;
+      .catchline {
+        color: @white;
+      }
     }
 
     .testing-infos {
@@ -823,6 +839,382 @@ body {
 }
 
 
+/*=== Page ABOUT ===*/
+#aboutUs {
+  .header-cover {
+    height: 100vh;
+    margin-top: 0px;
+    .bloc-infos {
+      bottom: 45%;
+      h1 {
+        margin-bottom: 0px;
+      }
+      p {
+        font-size: 1.5em;
+      }
+    }
+  }
+  .introduction {
+    font-size: 1.125em;
+    p {
+      color: @greyblack;
+    }
+  }
+  .author {
+    margin-top: 80px;
+    .bloc-left {
+      padding-right: 10%;
+      @media @mobile {
+        padding-right: 0%;
+      }
+    }
+    .bloc-right {
+      padding-left: 10%;
+      @media @mobile {
+        padding-left: 0%;
+      }
+      text-align: right;
+      h2, h3, .buttons  {
+        text-align: right !important;
+      }
+    }
+    .author-item {
+      margin: 60px 0px;
+      h2 {
+        color: @greyblack;
+        text-align: left;
+      }
+      p {
+        color: @lightgrey;
+        font-size: 1em;
+        line-height: 2em;
+      }
+      .author-stats {
+        h3 {
+          color: @lightgrey;
+          text-transform: uppercase;
+          font-size: 1.125em;
+          font-family: @ProximaNovaBold;
+          text-align: left;
+          margin: 60px auto 5px auto;
+        }
+        .chronos-list {
+          .row {
+            margin: 0px;
+            .race {
+              text-transform: uppercase;
+              font-size: 0.875em;
+              border-bottom: 1px solid @verylightgrey;
+              padding: 10px 0px;
+              max-width: 100px;
+            }
+
+            .chrono {
+              border-bottom: 1px solid @verylightgrey;
+              color: @lightgrey;
+              padding: 10px 0px;
+            }
+            &:last-child {
+              .race, .chrono {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+        .buttons {
+          margin-top: 30px;
+        }
+      }
+    }
+    .author-image {
+      margin: 60px 0px;
+    }
+  }
+  .quote-bloc {
+    position: relative;
+    img {
+      height: 620px;
+      @media @mobile {
+        height: 320px;
+      }
+    }
+    .quote {
+      position: absolute;
+      color: @white;
+      bottom: 35%;
+      @media @mobile {
+        bottom: 15%;
+      }
+      width: 100%;
+      text-align: center;
+      .text {
+        text-align: center;
+        font-size: 3.5em;
+        padding: 15px;
+        @media @tablet {
+          font-size: 3em;
+        }
+        @media @tabletportrait {
+          font-size: 2.5em;
+        }
+        @media @mobile {
+          font-size: 1.75em;
+        }
+        font-family: @QuestaGrande;
+        display: inline-block;
+        position: relative;
+        line-height: 1em;
+        .quote-author {
+          text-align: right;
+          font-size: 0.625em;
+          padding-right: 20px;
+          margin-top: 20px;
+          font-family: @ProximaNova;
+        }
+      }
+    }
+  }
+}
+
+/*=== Page RECETTE ===*/
+#recipe {
+  p {
+    font-size: 1em;
+    line-height: 2em;
+  }
+  .container-large {
+    .recipe-header {
+      margin-top: 250px;
+      .recipe-image {
+        padding-right: 3%;
+        img {
+          width: 100%;
+        }
+      }
+      .recipe-details {
+        padding-left: 3%;
+        .category {
+          text-transform: uppercase;
+          font-size: 1.125em;
+          color: @greyDark;
+        }
+
+        h1 {
+          text-transform: none;
+          font-size: 3.5em;
+          font-family: @ProximaNovaBold;
+          text-align: left;
+          color: @greyblack;
+          margin-top: 20px;
+          @media @mobile {
+            font-size: 1.75em;
+          }
+        }
+
+        .introduction {
+          font-size: 1.625em;
+          color: @greyDark;
+        }
+
+        .recipe-infos {
+          text-transform: uppercase;
+          margin-top: 100px;
+
+          div {
+            padding-right: 60px;
+            font-size: 0.75em;
+          }
+        }
+      }
+    }
+    .recipe-content {
+      .recipe-title {
+        color: @greyblack;
+        text-transform: uppercase;
+        font-size: 0.875em;
+        border: 1px solid @greyblack;
+        padding: 10px;
+        width: auto;
+        display: inline-block;
+        letter-spacing: 0.25em;
+        margin-bottom: 40px;
+      }
+      .recipe-ingredients {
+        padding-left: 70px;
+        .ingredients-section {
+          color: @lightgrey;
+          .section-title {
+            text-transform: uppercase;
+            font-size: 0.875em;
+            font-family: @ProximaNovaBolder;
+          }
+          ul {
+            font-size: 1em;
+            li {
+              line-height: 2.25em;
+            }
+          }
+        }
+      }
+      .recipe-steps {
+        h3 {
+          text-align: left;
+          color: @greyblack;
+          font-size: 1.5em;
+          font-family: @ProximaNovaBold;
+          margin-top: 30px;
+          margin-bottom: 3px;
+          &:first-child {
+            margin-top: 0px;
+          }
+        }
+      }
+
+      .recipe-final-image {
+        margin: 90px 0px;
+        width: 100%;
+      }
+
+      .recipe-conclusion {
+        h2 {
+          text-align: left;
+          color: @greyblack;
+          font-size: 3em;
+        }
+        .buttons {
+          margin: 90px auto;
+        }
+      }
+    }
+    .more-recipes {
+      margin: 80px auto 120px auto;
+      h2 {
+        color: @greyblack;
+        font-size: 3em;
+        margin-bottom: 30px;
+      }
+      .more-recipe-item {
+        a {
+          color: @greyblack;
+          font-size: 1.5em;
+          font-family: @ProximaNovaBolder;
+          padding: 10px 0px 5px 0px;
+          display: block;
+        }
+        p {
+          font-size: 0.875em;
+          line-height: 1.75em;
+        }
+      }
+    }
+  }
+}
+
+/* Bloc instagram */
+.instagram-container {
+  position: relative;
+  .instagram-text {
+    @media @mobile {
+      text-align: right;
+    }
+    h2 {
+      color: @greyblack;
+      font-size: 3em;
+      text-align: left;
+      font-family: @ProximaNovaBold;
+      @media @mobile {
+        font-size: 1.75em;
+        margin-bottom: 0px;
+      }
+    }
+    span {
+      color: @greyDark;
+      font-size: 1.25em;
+      font-family: @ProximaNovaBold;
+      @media @mobile {
+        display: inline-block;
+        margin: 10px 60px 20px 0px;
+      }
+    }
+    a {
+      position: absolute;
+      right: 15px;
+      height: 100%;
+      width: 100%;
+      .instagram {
+      width: 50px;
+      height: 50px;
+      }
+    }
+  }
+  .instagram-images {
+    height: 580px;
+    max-width: 720px;
+    margin: 0 auto;
+    @media @mobile {
+      height: auto;
+      max-width: none;
+      width: 100%;
+    }
+    img {
+      @media @mobile {
+        max-height: 220px;
+        top: 0px !important;
+        left: 0px !important;
+        width: 100% !important;
+        position: relative !important;
+      }
+      &.top {
+        @media @mobile {
+          height: auto;
+        }
+        width: 480px;
+        height: 360px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+      }
+
+      &.left {
+        width: 240px;
+        height: 360px;
+        position: absolute;
+        left: 0px;
+        top: 100px;
+        @media @mobile {
+          height: auto;
+        }
+      }
+
+      &.bottom {
+        width: 230px;
+        height: 220px;
+        position: absolute;
+        bottom: 0px;
+        left: 240px;
+        @media @mobile {
+          height: auto;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      .instagram {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 60px;
+        right: 75px;
+      }
+    }
+  }
+
+}
+
+/* Bloc "Score" */
 .total-score {
   background: @weTrailGradient;
   border-radius: 100%;
@@ -863,6 +1255,7 @@ body {
   }
 }
 
+/* Bloc "Texte riche" */
 .container-rich-text {
   .introduction {
     font-size: 1.125em;
@@ -1074,6 +1467,11 @@ p {
   max-width: 100%;
 }
 
+.image-full-width {
+  padding: 0px;
+  margin: 0px -1px;
+}
+
 .margin-top-added {
   margin-top: 140px;
   @media @laptop {
@@ -1101,6 +1499,10 @@ p {
   &.black {
     background-color: @greyblack;
     border: 1px solid @greyblack;
+  }
+  &.strava {
+    padding-left: 50px;
+    background: url("../images/picto-strava-blanc.png") no-repeat no-repeat 30px 10px @greyblack;
   }
 }
 
@@ -1141,4 +1543,25 @@ p {
     background: @CoverLightGradient;
     filter: opacity(50%);
   }
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
 }

@@ -21,7 +21,9 @@
     <div class="container container-full-width header-cover">
         <div class="opacity-filter"></div>
         <img class="img-cover" src="images/chaussure.jpg" alt="" />
-        <h1>Équipement</h1>
+        <div class="bloc-infos">
+            <h1>Équipement</h1>
+        </div>
         <div class="container articles-filters">
             <ul class="container-large">
                 <li>
