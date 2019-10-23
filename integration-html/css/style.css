@@ -1,21 +1,21 @@
 /*=== FONTS ===*/
 /* ProximaNova */
 @font-face {
-  font-family: 'ProximaNova-Regular';
+  font-family: 'ProximaNova';
   src: url('../fonts/ProximaNova-Regular.eot');
   src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ProximaNova-Extrabld';
+  font-family: 'ProximaNova';
   src: url('../fonts/ProximaNova-Extrabld.eot');
   src: url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Extrabld.ttf') format('truetype'), url('../fonts/ProximaNova-Extrabld.woff') format('woff');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ProximaNova-Bold';
+  font-family: 'ProximaNova';
   src: url('../fonts/ProximaNova-Bold.eot');
   src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.ttf') format('truetype'), url('../fonts/ProximaNova-Bold.woff') format('woff');
   font-weight: bold;
@@ -23,7 +23,7 @@
 }
 /* QuestaGrande */
 @font-face {
-  font-family: 'QuestaGrande-Regular';
+  font-family: 'QuestaGrande';
   src: url('../fonts/QuestaGrande-Regular.eot');
   src: url('../fonts/QuestaGrande-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/QuestaGrande-Regular.ttf') format('truetype'), url('../fonts/QuestaGrande-Regular.woff') format('woff');
   font-weight: normal;
@@ -31,7 +31,7 @@
 }
 body {
   font-size: 16px;
-  font-family: 'ProximaNova-Regular', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
   position: relative;
   min-height: 100%;
 }
@@ -58,7 +58,7 @@ body {
 @media only screen and (max-width: 991.98px) {
   .fixed-top.navbar > .container .navbar-brand {
     float: left;
-    padding: 13px 13px 13px 10%;
+    padding: 13px 5px 0px 5%;
   }
 }
 .fixed-top.navbar .container.menu {
@@ -77,6 +77,10 @@ body {
 @media only screen and (max-width: 991.98px) {
   .fixed-top.navbar .container.menu .navbar-right .navbar-nav {
     height: 100vh;
+    /*position: absolute;
+          width: 100%;
+          top: 70px;
+          right: 0px;*/
   }
 }
 .fixed-top.navbar .container.menu .navbar-right .navbar-nav .nav-item {
@@ -91,7 +95,7 @@ body {
 }
 .fixed-top.navbar .container.menu .navbar-right .navbar-nav .nav-item .nav-link {
   color: #383838;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-weight: bold;
   padding: 0px 30px;
   font-size: 1em;
 }
@@ -147,7 +151,7 @@ body {
 }
 .fixed-top.navbar .container.menu .navbar-right .navbar-nav .megamenu .dropdown-item .row .card .thumbnail span {
   font-size: 2em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-weight: 900;
   position: absolute;
   bottom: 60%;
   text-align: center;
@@ -173,7 +177,7 @@ body {
   visibility: hidden;
   opacity: 0;
   font-size: 1em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-weight: 900;
   position: absolute;
   bottom: 20%;
   text-align: center;
@@ -282,7 +286,8 @@ body {
 #carouselHome .carousel-item .carousel-caption h2 {
   text-transform: uppercase;
   font-size: 3.5em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
   color: #ffffff;
   padding: 10px 0px;
   margin: 0px;
@@ -352,7 +357,8 @@ body {
 }
 #topics .topic-item .thumbnail span {
   font-size: 2em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
   position: absolute;
   bottom: 10%;
   text-align: center;
@@ -450,6 +456,11 @@ body {
 .zones {
   margin-top: 100px;
 }
+@media only screen and (max-width: 991.98px) {
+  .zones {
+    margin-top: 70px;
+  }
+}
 .zones .header-cover {
   height: 75vh;
   padding: 0px;
@@ -525,7 +536,8 @@ body {
   text-transform: uppercase;
   color: #383838;
   padding: 30px 20px;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
   font-size: 1em;
   line-height: 1em;
   display: inline-block;
@@ -606,7 +618,8 @@ body {
 }
 .zones .news-list .row .col-news .news-item .news-content .infos {
   text-transform: uppercase;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
   padding: 20px 0px;
   font-size: 0.875em;
 }
@@ -619,12 +632,14 @@ body {
 .zones .news-list .row .col-news .news-item .news-content a {
   color: #383838;
   font-size: 1.375em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
 }
 @media only screen and (max-width: 767.98px) {
   .zones .news-list .row .col-news .news-item .news-content a {
     font-size: 1.125em;
-    font-family: 'ProximaNova-Bold', sans-serif;
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: bold;
   }
 }
 .zones .news-list .row .col-news .news-item .news-content a:before {
@@ -648,7 +663,8 @@ body {
   color: #383838;
   font-size: 0.875em;
   text-transform: uppercase;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -695,7 +711,8 @@ body {
   flex-direction: row;
   justify-content: space-around;
   color: #686868;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
 }
 @media only screen and (max-width: 767.98px) {
   #testProduit .container.product-pictos .container ul {
@@ -723,7 +740,8 @@ body {
 }
 #testProduit .summary .product h3 {
   text-transform: uppercase;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
   font-size: 3.25em;
   color: #383838;
   margin: 130px 0px 0px 40%;
@@ -740,7 +758,8 @@ body {
   top: 0px;
   right: -67px;
   font-size: 0.75em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
   z-index: 999;
 }
 #testProduit .summary .product .total-score .note {
@@ -780,7 +799,8 @@ body {
 }
 #testProduit .summary .full-score .score-details .score-item .title {
   text-align: right;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
   font-size: 1.125em;
 }
 @media only screen and (max-width: 767.98px) {
@@ -802,7 +822,8 @@ body {
   border-radius: 10px;
 }
 #testProduit .summary .full-score .score-details .score-item .ranking {
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
   font-size: 1.125em;
 }
 @media only screen and (max-width: 767.98px) {
@@ -833,12 +854,29 @@ body {
 #aboutUs .author {
   margin-top: 80px;
 }
+@media only screen and (max-width: 767.98px) {
+  #aboutUs .author .item-1 {
+    order: 2;
+  }
+  #aboutUs .author .item-2 {
+    order: 1;
+  }
+  #aboutUs .author .item-3 {
+    order: 3;
+  }
+  #aboutUs .author .item-4 {
+    order: 4;
+  }
+}
 #aboutUs .author .bloc-left {
   padding-right: 10%;
 }
 @media only screen and (max-width: 767.98px) {
   #aboutUs .author .bloc-left {
-    padding-right: 0%;
+    padding: 0px;
+  }
+  #aboutUs .author .bloc-left.author-item {
+    padding: 0px 20px;
   }
 }
 #aboutUs .author .bloc-right {
@@ -847,7 +885,10 @@ body {
 }
 @media only screen and (max-width: 767.98px) {
   #aboutUs .author .bloc-right {
-    padding-left: 0%;
+    padding: 0px;
+  }
+  #aboutUs .author .bloc-right.author-item {
+    padding: 0px 20px;
   }
 }
 #aboutUs .author .bloc-right h2,
@@ -857,6 +898,14 @@ body {
 }
 #aboutUs .author .author-item {
   margin: 60px 0px;
+}
+@media only screen and (max-width: 767.98px) {
+  #aboutUs .author .author-item {
+    margin: 20px 0px 100px 0px;
+  }
+  #aboutUs .author .author-item:last-child {
+    margin-bottom: 20px;
+  }
 }
 #aboutUs .author .author-item h2 {
   color: #383838;
@@ -871,7 +920,8 @@ body {
   color: #919191;
   text-transform: uppercase;
   font-size: 1.125em;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
   text-align: left;
   margin: 60px auto 5px auto;
 }
@@ -884,6 +934,11 @@ body {
   border-bottom: 1px solid lightgrey;
   padding: 10px 0px;
   max-width: 100px;
+}
+@media only screen and (max-width: 767.98px) {
+  #aboutUs .author .author-item .author-stats .chronos-list .row .race {
+    max-width: none;
+  }
 }
 #aboutUs .author .author-item .author-stats .chronos-list .row .chrono {
   border-bottom: 1px solid lightgrey;
@@ -899,6 +954,11 @@ body {
 }
 #aboutUs .author .author-image {
   margin: 60px 0px;
+}
+@media only screen and (max-width: 767.98px) {
+  #aboutUs .author .author-image {
+    margin: 0px;
+  }
 }
 #aboutUs .quote-bloc {
   position: relative;
@@ -927,7 +987,7 @@ body {
   text-align: center;
   font-size: 3.5em;
   padding: 15px;
-  font-family: 'QuestaGrande-Regular', sans-serif;
+  font-family: 'QuestaGrande', sans-serif;
   display: inline-block;
   position: relative;
   line-height: 1em;
@@ -952,7 +1012,7 @@ body {
   font-size: 0.625em;
   padding-right: 20px;
   margin-top: 20px;
-  font-family: 'ProximaNova-Regular', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
 }
 /*=== Page RECETTE ===*/
 #recipe p {
@@ -962,14 +1022,29 @@ body {
 #recipe .container-large .recipe-header {
   margin-top: 250px;
 }
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-header {
+    margin-top: 100px;
+  }
+}
 #recipe .container-large .recipe-header .recipe-image {
   padding-right: 3%;
+}
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-header .recipe-image {
+    padding: 10px 15px;
+  }
 }
 #recipe .container-large .recipe-header .recipe-image img {
   width: 100%;
 }
 #recipe .container-large .recipe-header .recipe-details {
   padding-left: 3%;
+}
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-header .recipe-details {
+    padding: 15px;
+  }
 }
 #recipe .container-large .recipe-header .recipe-details .category {
   text-transform: uppercase;
@@ -979,27 +1054,47 @@ body {
 #recipe .container-large .recipe-header .recipe-details h1 {
   text-transform: none;
   font-size: 3.5em;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
   text-align: left;
   color: #383838;
   margin-top: 20px;
 }
 @media only screen and (max-width: 767.98px) {
   #recipe .container-large .recipe-header .recipe-details h1 {
-    font-size: 1.75em;
+    font-size: 2.25em;
   }
 }
 #recipe .container-large .recipe-header .recipe-details .introduction {
   font-size: 1.625em;
   color: #606060;
 }
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-header .recipe-details .introduction {
+    font-size: 1.25em;
+    line-height: 1.75em;
+  }
+}
 #recipe .container-large .recipe-header .recipe-details .recipe-infos {
   text-transform: uppercase;
   margin-top: 100px;
 }
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-header .recipe-details .recipe-infos {
+    margin-top: 0px;
+  }
+}
 #recipe .container-large .recipe-header .recipe-details .recipe-infos div {
   padding-right: 60px;
   font-size: 0.75em;
+}
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-header .recipe-details .recipe-infos div {
+    padding: 20px 0px;
+  }
+  #recipe .container-large .recipe-header .recipe-details .recipe-infos div img {
+    padding-right: 15px;
+  }
 }
 #recipe .container-large .recipe-content .recipe-title {
   color: #383838;
@@ -1012,8 +1107,18 @@ body {
   letter-spacing: 0.25em;
   margin-bottom: 40px;
 }
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-content .recipe-title {
+    margin-bottom: 30px;
+  }
+}
 #recipe .container-large .recipe-content .recipe-ingredients {
   padding-left: 70px;
+}
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-content .recipe-ingredients {
+    padding-left: 15px;
+  }
 }
 #recipe .container-large .recipe-content .recipe-ingredients .ingredients-section {
   color: #919191;
@@ -1021,7 +1126,8 @@ body {
 #recipe .container-large .recipe-content .recipe-ingredients .ingredients-section .section-title {
   text-transform: uppercase;
   font-size: 0.875em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
 }
 #recipe .container-large .recipe-content .recipe-ingredients .ingredients-section ul {
   font-size: 1em;
@@ -1029,13 +1135,24 @@ body {
 #recipe .container-large .recipe-content .recipe-ingredients .ingredients-section ul li {
   line-height: 2.25em;
 }
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-content .recipe-steps {
+    margin-top: 40px;
+  }
+}
 #recipe .container-large .recipe-content .recipe-steps h3 {
   text-align: left;
   color: #383838;
   font-size: 1.5em;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
   margin-top: 30px;
   margin-bottom: 3px;
+}
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-content .recipe-steps h3 {
+    font-size: 1.25em;
+  }
 }
 #recipe .container-large .recipe-content .recipe-steps h3:first-child {
   margin-top: 0px;
@@ -1044,32 +1161,23 @@ body {
   margin: 90px 0px;
   width: 100%;
 }
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-content .recipe-final-image {
+    margin-bottom: 20px;
+  }
+}
 #recipe .container-large .recipe-content .recipe-conclusion h2 {
   text-align: left;
   color: #383838;
   font-size: 3em;
 }
+@media only screen and (max-width: 767.98px) {
+  #recipe .container-large .recipe-content .recipe-conclusion h2 {
+    font-size: 2.25em;
+  }
+}
 #recipe .container-large .recipe-content .recipe-conclusion .buttons {
   margin: 90px auto;
-}
-#recipe .container-large .more-recipes {
-  margin: 80px auto 120px auto;
-}
-#recipe .container-large .more-recipes h2 {
-  color: #383838;
-  font-size: 3em;
-  margin-bottom: 30px;
-}
-#recipe .container-large .more-recipes .more-recipe-item a {
-  color: #383838;
-  font-size: 1.5em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
-  padding: 10px 0px 5px 0px;
-  display: block;
-}
-#recipe .container-large .more-recipes .more-recipe-item p {
-  font-size: 0.875em;
-  line-height: 1.75em;
 }
 /* Bloc instagram */
 .instagram-container {
@@ -1084,7 +1192,8 @@ body {
   color: #383838;
   font-size: 3em;
   text-align: left;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
 }
 @media only screen and (max-width: 767.98px) {
   .instagram-container .instagram-text h2 {
@@ -1095,7 +1204,8 @@ body {
 .instagram-container .instagram-text span {
   color: #606060;
   font-size: 1.25em;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
 }
 @media only screen and (max-width: 767.98px) {
   .instagram-container .instagram-text span {
@@ -1182,6 +1292,69 @@ body {
   bottom: 60px;
   right: 75px;
 }
+/* Bloc "more or related content" */
+.more-content {
+  margin: 80px auto 120px auto;
+}
+.more-content h2 {
+  color: #383838;
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 767.98px) {
+  .more-content h2 {
+    font-size: 2.25em;
+  }
+}
+.more-content .more-content-item {
+  margin-bottom: 50px;
+}
+.more-content .more-content-item .thumbnail-content img {
+  width: 100%;
+}
+.more-content .more-content-item .thumbnail-content:hover {
+  cursor: pointer;
+}
+@media only screen and (max-width: 767.98px) {
+  .more-content .more-content-item .content {
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1), 5px 0px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-top: -30px;
+    position: relative;
+    background-color: #ffffff;
+    text-align: center;
+  }
+}
+.more-content .more-content-item .content a {
+  color: #383838;
+  font-size: 1.5em;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
+  padding: 10px 0px 5px 0px;
+  display: block;
+}
+@media only screen and (max-width: 767.98px) {
+  .more-content .more-content-item .content a {
+    padding: 0px;
+    font-size: 1.25em;
+  }
+}
+.more-content .more-content-item .content a:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100% !important;
+  width: 100% !important;
+  display: block;
+  z-index: 4;
+}
+.more-content .more-content-item .content p {
+  font-size: 0.875em;
+  line-height: 1.75em;
+}
 /* Bloc "Score" */
 .total-score {
   background: linear-gradient(to right, #FFAE46, #FF428D);
@@ -1195,7 +1368,8 @@ body {
   height: 135px;
   text-transform: uppercase;
   font-size: 0.75em;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
   text-align: center;
 }
 @media only screen and (max-width: 767.98px) {
@@ -1325,7 +1499,8 @@ h4,
 h5 {
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'ProximaNova-Extrabld', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: 900;
 }
 h1 {
   text-transform: uppercase;
@@ -1380,7 +1555,8 @@ h3 {
   }
 }
 h5 {
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-family: 'ProximaNova', sans-serif;
+  font-weight: bold;
 }
 a {
   color: #ffffff;
@@ -1487,7 +1663,7 @@ p {
   padding: 0 25px;
   white-space: normal;
   line-height: 30px;
-  font-family: 'ProximaNova-Bold', sans-serif;
+  font-weight: bold;
   width: auto;
   display: inline-block;
 }

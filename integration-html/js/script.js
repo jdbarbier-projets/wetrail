@@ -11,17 +11,12 @@ $(document).ready(function(){
         $( this ).parent().parent().find( ".img-cover").toggleClass("hover" );
         $( this ).parent().parent().toggleClass("hover" );
     });
-    /*$('.news-list .news-item a').bind('touchstart touchend', function(e) {
-        $( this ).parent().parent().find( ".img-cover").toggleClass("hover" );
-        $( this ).parent().parent().toggleClass("hover" );
-    });*/
 
     // Navigation menu classes
     $('.nav-item').on('show.bs.dropdown', function () {
         $(".overlay").addClass("visible");
         $( this ).parent().parent().parent().addClass("menu-deployed");
     });
-
     $('.nav-item').on('hide.bs.dropdown', function () {
         $(".overlay").removeClass("visible");
         $( this ).parent().parent().parent().removeClass("menu-deployed");
@@ -29,4 +24,15 @@ $(document).ready(function(){
 
     // Set the height of author image of the "about us" page
     $("#aboutUs .author .author-image img").height( $("#aboutUs .author .author-item").height() );
+
+
+    // Redirection when clicking/touching an image of a more item bloc
+    $(".more-content-item .thumbnail-content").click(function(){
+        window.location.href = $( this ).parent().find( ".content a").attr("href");
+
+    });
+    $(".more-content-item .thumbnail-content").bind('touchstart touchend', function() {
+        window.location.href = $( this ).parent().find( ".content a").attr("href");
+    });
+
 });

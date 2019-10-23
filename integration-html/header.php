@@ -6,6 +6,7 @@
         <a class="navbar-brand" href="/">
             <img src="images/logo-we-trail.png" alt="weTrail">
         </a>
+        <div class="clearfix d-block d-md-none"></div>
         <div id="navbarCollapse" class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
                 <li class="dropdown menu-large nav-item">
@@ -45,7 +46,7 @@
                             <div class="row">
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
-                                        <a href="#" class="thumbnail">
+                                        <a href="list.php" class="thumbnail">
                                             <img class="img-cover" alt="" src="images/deadlift.jpg" />
                                             <span>Textile</span>
                                             <div class="button">
@@ -56,7 +57,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
-                                        <a href="#" class="thumbnail">
+                                        <a href="list.php" class="thumbnail">
                                             <img class="img-cover" alt="" src="images/traileur.jpg" />
                                             <span>Chaussures</span>
                                             <div class="button">
@@ -67,7 +68,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
-                                        <a href="#" class="thumbnail">
+                                        <a href="list.php" class="thumbnail">
                                             <img class="img-cover" alt="" src="images/trail_bag.jpg" />
                                             <span>Technologie</span>
                                             <div class="button">
@@ -78,7 +79,7 @@
                                 </div>
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
-                                        <a href="#" class="thumbnail">
+                                        <a href="list.php" class="thumbnail">
                                             <img class="img-cover" alt="" src="images/trail_soleil.jpg" />
                                             <span>Accessoires</span>
                                             <div class="button">
@@ -149,7 +150,7 @@
                             <div class="row">
                                 <div class="col-md-6 col-lg-3 text-center">
                                     <div class="card">
-                                        <a href="#" class="thumbnail">
+                                        <a href="recipe.php" class="thumbnail">
                                             <img class="img-cover" alt="" src="images/deadlift.jpg" />
                                             <span>Recettes spéciales trail</span>
                                             <div class="button">
@@ -174,7 +175,7 @@
                     </ul>
                 </li>
                 <li class="menu-large nav-item">
-                    <a href="#" class="nav-link">À propos </a>
+                    <a href="about.php" class="nav-link">À propos </a>
                 </li>
             </ul>
         </div>

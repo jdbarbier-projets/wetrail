@@ -35,7 +35,7 @@
         </div>
 
         <div class="author row">
-            <div class="author-item bloc-left col-12 col-md-6">
+            <div class="author-item item-1 bloc-left col-12 col-md-6">
                 <h2>Alexia</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus. Aliquam vel velit dolor. Aenean velit libero, iaculis et lectus</p>
                 <div class="author-stats">
@@ -63,13 +63,13 @@
                     </div>
                 </div>
             </div>
-            <div class="author-image bloc-right col-12 col-md-6">
+            <div class="author-image item-2 bloc-right col-12 col-md-6">
                 <img class="img-fluid img-cover" src="images/photo-auteur-01.jpg" alt="" />
             </div>
-            <div class="author-image bloc-left col-12 col-md-6">
+            <div class="author-image item-3 bloc-left col-12 col-md-6">
                 <img class="img-fluid img-cover" src="images/photo-auteur-02.jpg" alt="" />
             </div>
-            <div class="author-item bloc-right col-12 col-md-6">
+            <div class="author-item item-4 bloc-right col-12 col-md-6">
                 <h2>Jean-David</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus. Aliquam vel velit dolor. Aenean velit libero, iaculis et lectus</p>
                 <div class="author-stats">
