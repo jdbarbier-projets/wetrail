@@ -591,6 +591,59 @@ body {
       }
     }
   }
+  .pictos-line {
+    margin: 0 auto;
+    box-shadow: @box-shadow-filter-bars;
+    @media @mobile {
+      padding: 0px 0px 0px 20px;
+    }
+
+    .container {
+      margin: 0 auto;
+      position: relative;
+      @media @mobile {
+        padding: 0px;
+        overflow-x: scroll;
+        width: 100%;
+      }
+
+      ul {
+        padding: 0px;
+        margin: 0px;
+        height: 90px;
+        line-height: 90px;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: @greytext;
+        font-family: @ProximaNova;
+        font-weight: bold;
+        @media @mobile {
+          margin-right: 0px;
+          display: inline-block;
+          flex-wrap: nowrap;
+          width: 650px;
+          padding-left: 20px;
+        }
+
+        li {
+          @media @mobile {
+            display: inline-block;
+            padding-right: 20px;
+          }
+
+          img {
+            margin-right: 10px;
+
+            &.with-margin {
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
   .news-list {
     .row {
       display: flex;
@@ -714,55 +767,10 @@ body {
       }
     }
   }
-  .container.product-pictos {
-    margin: 0 auto;
-    box-shadow: @box-shadow-filter-bars;
-    @media @mobile {
-      padding: 0px 0px 0px 20px;
-    }
-
+  .pictos-line {
     .container {
-      margin: 0 auto;
-      position: relative;
-      @media @mobile {
-        padding: 0px;
-        overflow-x: scroll;
-        width: 100%;
-      }
-
       ul {
-        padding: 0px;
-        margin: 0px 15% 0px 0px;
-        height: 90px;
-        line-height: 90px;
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        color: @greytext;
-        font-family: @ProximaNova;
-        font-weight: bold;
-        @media @mobile {
-          margin-right: 0px;
-          display: inline-block;
-          flex-wrap: nowrap;
-          width: 650px;
-        }
-
-        li {
-          @media @mobile {
-            display: inline-block;
-            padding-right: 20px;
-          }
-
-          img {
-            margin-right: 10px;
-
-            &.with-margin {
-              margin-bottom: 10px;
-            }
-          }
-        }
+        margin-right: 15%;
       }
     }
   }
@@ -855,6 +863,16 @@ body {
   }
 }
 
+
+/*=== Page PARCOURS ===*/
+#parcours {
+  .pictos-line {
+    ul {
+      justify-content: space-between;
+      margin: 0px -15px;
+    }
+  }
+}
 
 /*=== Page ABOUT ===*/
 #aboutUs {
@@ -1184,6 +1202,36 @@ body {
   }
 }
 
+/* Bloc auteur */
+.article-author {
+  .author-image {
+    text-align: center;
+    img {
+      height: 180px;
+      width: 180px;
+      border-radius: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  .author-details {
+    .author-title {
+      color: @lightgrey;
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+    .author-name {
+      font-size: 2em;
+      font-weight: 900;
+      line-height: 1.125em;
+    }
+    .author-description {
+      color: @lightgrey;
+      line-height: 2em;
+      margin: 10px 0px;
+    }
+  }
+}
+
 /* Bloc instagram */
 .instagram-container {
   position: relative;
@@ -1441,17 +1489,20 @@ body {
     .object-img {
       margin: auto -25%;
       @media @mobile {
-        margin: auto -5%;
+        margin: auto 0px;
       }
     }
 
     .carousel {
-      margin: auto -25%;
+      margin: 20px -25%;
       @media @mobile {
-        margin: auto -5%;
+        margin: 40px 0px;
       }
       .image {
         padding: 20px 10px 0px 10px;
+        @media @mobile {
+          padding: 10px 0px;
+        }
         img {
           height: 300px;
           @media @mobile {
@@ -1461,6 +1512,9 @@ body {
         &:first-child {
           padding-right: 10px;
           padding-left: 10px;
+          @media @mobile {
+            padding: 10px 0px;
+          }
           img {
               height: 600px;
             @media @mobile {
@@ -1468,6 +1522,74 @@ body {
             }
           }
         }
+      }
+      &.large-height {
+        .image {
+          img {
+            height: 500px;
+            @media @mobile {
+              height: 250px;
+            }
+          }
+          &:nth-child(2n) {
+            @media @mobile {
+              padding-right: 5px;
+            }
+          }
+          &:nth-child(2n +1) {
+            @media @mobile {
+              padding-left: 5px;
+
+            }
+          }
+          &:first-child {
+            padding: 10px auto;
+            @media @mobile {
+              padding: 0px;
+            }
+
+            img {
+              height: 700px;
+              @media @mobile {
+                height: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .image-embed {
+      margin: 40px -25%;
+      @media @mobile {
+        margin: 20px -15px;
+      }
+    }
+    .embed-button {
+      margin: 40px 0px;
+    }
+    .simple-quote {
+      font-size: 2em;
+      font-family: @QuestaGrande;
+      background: url("../images/picto-quote.png") top left no-repeat no-repeat;
+      padding-left: 80px;
+      margin: 70px 0px;
+      line-height: 1.875em;
+      @media @mobile {
+        margin: 20px 0px;
+        line-height: 1.125em;
+      }
+    }
+    .multiple-quote {
+      font-weight: bold;
+      font-size: 1.75em;
+      margin: 60px 0px;
+      @media @mobile {
+        margin: 40px 0px;
+      }
+      .border-top-quote {
+        width: 60px;
+        border-top: 3px solid @greyblack;
+        padding-top: 10px;
       }
     }
   }
@@ -1630,14 +1752,14 @@ p {
   border: 1px solid @white;
   font-size: .875em;
   border-radius: 30px;
-  padding: 0 25px;
+  padding: 10px 25px;
   white-space: normal;
-  line-height: 30px;
+  line-height: 1.25em;
   font-weight: bold;
   width: auto;
   display: inline-block;
   &.padding-large {
-    padding: 5px 40px;
+    padding: 10px 40px;
   }
   &.black {
     background-color: @greyblack;
@@ -1672,6 +1794,7 @@ p {
 
 .img-cover {
   object-fit: cover;
+  width: 100%;
 }
 
 .opacity-filter {

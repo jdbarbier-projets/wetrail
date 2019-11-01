@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="container container-full-width product-pictos">
+    <div class="container container-full-width pictos-line">
         <div class="container container-large">
             <ul>
                 <li class="trail"><img src="images/picto-chaussure-trail.png" class="with-margin" alt="" />Trail</li>
