@@ -30,7 +30,7 @@
     <div class="container container-medium">
         <div class="introduction">
             <div class="ezxml-text">
-                <p>Trail it est un blog lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales id massa sed lobortis. Pellentesque nisi mauris, dictum quis magna a, dignissim feugiat dui. Cras sed est eu odio bibendum sagittis. Pellentesque at sem dui. Proin est nunc, vulputate sit amet facilisis a, pharetra ut purus. Sed mollis lacus massa, in consectetur arcu efficitur ac. Integer vel ligula lorem. Integer porttitor metus eget interdum hendrerit.</p>
+                <p>Trail it est un blog lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales id massa sed lobortis. Pellentesque nisi mauris, dictum quis magna a, dignissim feugiat dui. Cras sed est eu odio bibendum sagittis. Pellentesque at sem dui. Proin est nunc, vulputate sit amet facilisis a, pharetra ut purus. Sed mollis lacus massa, in consectetur arcu efficitur ac. Integer vel ligula.</p>
             </div>
         </div>
 

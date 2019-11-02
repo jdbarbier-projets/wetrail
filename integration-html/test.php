@@ -39,7 +39,7 @@
             <ul>
                 <li class="trail"><img src="images/picto-chaussure-trail.png" class="with-margin" alt="" />Trail</li>
                 <li class="weight"><img src="images/picto-poids.png" class="with-margin" alt="" />195g (42-H)</li>
-                <li class="drop"><img src="images/picto-chaussure-course.png" class="with-margin" alt="" />0mm</li>
+                <li class="drop"><img src="images/picto-drop.png" class="with-margin" alt="" />0mm</li>
                 <li class="duration"><img src="images/picto-sablier.png" alt="" />665km</li>
                 <li class="price"><img src="images/picto-prix.png" alt="" />130€</li>
             </ul>
@@ -62,7 +62,7 @@
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                 <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             </div>
-            <div class="object-img">
+            <div class="object image-embed">
                 <img class="img-fluid" src="images/photo-01.jpg" alt="" />
             </div>
             <div class="ezxml-text">
@@ -76,10 +76,10 @@
                     <div class="image col-12">
                         <img class="img-fluid img-cover" src="images/photo-01.jpg" alt="" />
                     </div>
-                    <div class="image col-12 col-md-4">
+                    <div class="image col-6 col-md-4">
                         <img class="img-fluid img-cover" src="images/photo-01.jpg" alt="" />
                     </div>
-                    <div class="image col-12 col-md-4">
+                    <div class="image col-6 col-md-4">
                         <img class="img-fluid img-cover" src="images/header-article.jpg" alt="" />
                     </div>
                     <div class="image col-12 col-md-4">
@@ -97,14 +97,18 @@
 
     <div class="container container-full-width summary">
         <div class="row">
-            <div class="product col-12 col-md-5">
+            <div class="product col-12 col-lg-5">
                 <h3>Altra <br />Lone Peak</h3>
-                <div class="total-score black d-none d-md-block">
+                <div class="product-image">
+                    <img class="img-fluid img-cover landscape" src="images/altra_lone_peak-01.png" alt="" />
+                    <img class="img-fluid img-cover portrait d-none" src="images/veste_pluie_icon_pdx_2_hi-viz.png" alt="" />
+                </div>
+                <div class="total-score black d-none d-lg-block">
                     <div class="note">9.2</div>
                     <div class="text">Note globale</div>
                 </div>
             </div>
-            <div class="full-score col-12 col-md-7">
+            <div class="full-score col-12 col-lg-7">
                 <h3>En résumé</h3>
                 <div class="score-details">
                     <div class="score-item row">
@@ -154,9 +158,9 @@
                     </div>
                 </div>
                 <div class="container container-large">
-                    <div class="row">
+                    <div class="pros-and-cons row">
                         <div class="benefits col-12 col-md-6">
-                            <h4>Les plus</h4>
+                            <h4 class="text-left text-uppercase">Les plus</h4>
                             <ul>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</li>
@@ -164,7 +168,7 @@
                             </ul>
                         </div>
                         <div class="incoveniences col-12 col-md-6">
-                            <h4>Les moins</h4>
+                            <h4 class="text-left text-uppercase">Les moins</h4>
                             <ul>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</li>
@@ -172,6 +176,22 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container-medium">
+        <div class="article-author row">
+            <div class="author-image col-12 col-md-5 col-xl-4">
+                <img class="img-cover" src="images/img-autheur.jpg" />
+            </div>
+            <div class="author-details col-12 col-md-7 col-xl-8">
+                <div class="author-title text-center text-md-left text-uppercase">Écrit par</div>
+                <div class="author-name text-center text-md-left">Alexia Labbé</div>
+                <div class="author-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis</div>
+                <div class="buttons text-uppercase text-center text-md-right">
+                    <a href="#" class="btn btn-rond black padding-large">En savoir plus</a>
                 </div>
             </div>
         </div>

@@ -25,23 +25,29 @@
             <h1>Équipement</h1>
         </div>
         <div class="container articles-filters">
-            <ul class="container-large">
-                <li>
-                    <a href="#" class="active">Tous</a>
-                </li>
-                <span class="d-md-none">|</span>
-                <li>
-                    <a href="#">Chaussures</a>
-                </li>
-                <span class="d-md-none">|</span>
-                <li>
-                    <a href="#">Textile</a>
-                </li>
-                <span class="d-md-none">|</span>
-                <li>
-                    <a href="#">Accessoires</a>
-                </li>
-            </ul>
+            <div class="container-large">
+                <ul class="filters-list">
+                    <li>
+                        <a href="#" class="active">Tous</a>
+                    </li>
+                    <span class="d-md-none">|</span>
+                    <li>
+                        <a href="#">Chaussures</a>
+                    </li>
+                    <span class="d-md-none">|</span>
+                    <li>
+                        <a href="#">Textile</a>
+                    </li>
+                    <span class="d-md-none">|</span>
+                    <li>
+                        <a href="#">Accessoires</a>
+                    </li>
+                    <span class="d-md-none">|</span>
+                    <li>
+                        <a href="#">Technologie</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
