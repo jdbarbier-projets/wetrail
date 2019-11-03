@@ -12,6 +12,8 @@
 @weTrailGradient : linear-gradient(to right, #FFAE46, #FF428D);
 @CoverLightGradient :linear-gradient(to bottom, transparent 0%, #000000 100%);
 @yellowGold : #ffae46;
+@pinkWeTrail : #FF428D;
+@summaryBackground : #f4f4f4f4;
 @greyopacity: rgba(0,0,0,0.4);
 @greyOverlayOpacity: rgba(100, 100, 100, 0.5);
 @blackLightGradient : linear-gradient(180deg,transparent,transparent 0%,rgba(0,0,0,0.5) 96%,rgba(0,0,0,0));
@@ -1699,6 +1701,39 @@ body {
   }
 }
 
+
+/* Bloc "Summary"/Table of contents */
+.page-summary {
+  background-color: @summaryBackground;
+  padding: 40px 0px;
+  margin: 0 auto;
+  .container {
+    margin: 0 auto;
+    .content-summary {
+      color: @lightgrey;
+      line-height: 1.5em;
+      font-size: 1.125em;
+      list-style-type: none;
+      padding-left: 0px;
+      margin-bottom: 0px;
+      li {
+        &:before {
+          content: "\2022";
+          font-weight: bold;
+          font-size: 1em;
+          display: inline-block;
+          width: 1.25em;
+          color: @pinkWeTrail;
+        }
+        a {
+          color: @lightgrey;
+        }
+      }
+    }
+  }
+}
+
+
 /* Bloc "Texte riche" */
 .container-rich-text {
   .introduction {
@@ -1714,20 +1749,45 @@ body {
     }
   }
   .content {
+    line-height: 2em;
     font-size: 0.875em;
+    color: @lightgrey;
     @media @mobile {
       font-size: 0.75em;
     }
-    color: @greyblack;
+    ul {
+      color: @lightgrey;
+      line-height: 2em;
+      font-size: 1.25em;
+      list-style-type: none;
+      padding-left: 0px;
+      margin: 10px auto 30px auto;
+      li {
+        padding-bottom: 5px;
+        &:before {
+          content: "\2022";
+          color: @greyblack;
+          font-weight: bold;
+          font-size: 1em;
+          display: inline-block;
+          width: 0.625em;
+        }
+      }
+    }
+    strong {
+      color: @greyblack;
+    }
     p {
       margin: 0px 0px 30px 0px;
       line-height: 2em;
+      color: @lightgrey;
+
     }
     h2 {
       font-size: 3.5em;
       text-align: left;
       color: @greyblack;
-      margin: 40px auto 15px auto;
+      margin: 50px auto 15px auto;
       @media @mobile {
         font-size: 2.25em;
       }
@@ -1735,20 +1795,24 @@ body {
     h3 {
       font-size: 2.75em;
       text-align: left;
-      color: @greyblack;
-      margin: 30px auto 10px auto;
+      color: @white;
+      margin: 0px auto 10px auto;
+      background: @weTrailGradient;
+      width: auto;
+      display: inline-block;
+      padding: 10px 20px;
       @media @mobile {
         font-size: 1.875em;
       }
     }
 
     .carousel {
-      margin: 70px -25%;
+      margin: 55px -25%;
       @media @tablet {
-        margin: 60px -20%;
+        margin: 55px -20%;
       }
       @media @tabletportrait {
-        margin: 60px 0px;
+        margin: 55px 0px;
       }
       @media @mobile {
         margin: 50px 0px;
@@ -1842,12 +1906,12 @@ body {
       }
     }
     .image-embed {
-      margin: 70px -25%;
+      margin: 55px -25%;
       @media @tablet {
-        margin: 60px -20%;
+        margin: 55px -20%;
       }
       @media @tabletportrait {
-        margin: 60px -15px;
+        margin: 55px -15px;
       }
       @media @mobile {
         margin: 50px -15px;
@@ -1857,6 +1921,7 @@ body {
       margin: 40px 0px;
     }
     .simple-quote {
+      color: @greyblack;
       font-size: 2em;
       font-family: @QuestaGrande;
       background: url("../images/picto-quote.png") top left no-repeat no-repeat;
@@ -1869,11 +1934,13 @@ body {
       }
     }
     .multiple-quote {
+      color: @greyblack;
       font-weight: bold;
       font-size: 1.75em;
-      margin: 60px 0px;
+      margin: 45px 0px;
+      line-height: 1.5em;
       @media @mobile {
-        margin: 40px 0px;
+        margin: 30px 0px;
       }
       .border-top-quote {
         width: 60px;

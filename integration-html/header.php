@@ -108,7 +108,7 @@
                                 <div class="row">
                                     <div class="col-md-6 col-lg-3 text-center">
                                         <div class="card">
-                                            <a href="#" class="thumbnail">
+                                            <a href="article.php" class="thumbnail">
                                                 <img class="img-cover d-none d-lg-block" alt="" src="images/textile.jpg" />
                                                 <span>Séances</span>
                                                 <div class="button d-none d-lg-block">
@@ -119,7 +119,7 @@
                                     </div>
                                     <div class="col-md-6 col-lg-3 text-center">
                                         <div class="card">
-                                            <a href="#" class="thumbnail">
+                                            <a href="article.php" class="thumbnail">
                                                 <img class="img-cover d-none d-lg-block" alt="" src="images/chaussure.jpg" />
                                                 <span>Renforcement musculaire</span>
                                                 <div class="button d-none d-lg-block">
@@ -130,7 +130,7 @@
                                     </div>
                                     <div class="col-md-6 col-lg-3 text-center">
                                         <div class="card">
-                                            <a href="#" class="thumbnail">
+                                            <a href="article.php" class="thumbnail">
                                                 <img class="img-cover d-none d-lg-block" alt="" src="images/technologie.jpg" />
                                                 <span>Récupération</span>
                                                 <div class="button d-none d-lg-block">
@@ -141,7 +141,7 @@
                                     </div>
                                     <div class="col-md-6 col-lg-3 text-center">
                                         <div class="card">
-                                            <a href="#" class="thumbnail">
+                                            <a href="article.php" class="thumbnail">
                                                 <img class="img-cover d-none d-lg-block" alt="" src="images/accessoires.jpg" />
                                                 <span>Étirements / Yoga</span>
                                                 <div class="button d-none d-lg-block">

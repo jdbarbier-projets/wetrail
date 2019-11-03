@@ -1722,6 +1722,34 @@ body {
 .total-score.black {
   background: #383838;
 }
+/* Bloc "Summary"/Table of contents */
+.page-summary {
+  background-color: #f4f4f4f4;
+  padding: 40px 0px;
+  margin: 0 auto;
+}
+.page-summary .container {
+  margin: 0 auto;
+}
+.page-summary .container .content-summary {
+  color: #919191;
+  line-height: 1.5em;
+  font-size: 1.125em;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+.page-summary .container .content-summary li:before {
+  content: "\2022";
+  font-weight: bold;
+  font-size: 1em;
+  display: inline-block;
+  width: 1.25em;
+  color: #FF428D;
+}
+.page-summary .container .content-summary li a {
+  color: #919191;
+}
 /* Bloc "Texte riche" */
 .container-rich-text .introduction {
   font-size: 1.125em;
@@ -1738,23 +1766,47 @@ body {
   font-size: 1.375em;
 }
 .container-rich-text .content {
+  line-height: 2em;
   font-size: 0.875em;
-  color: #383838;
+  color: #919191;
 }
 @media only screen and (max-width: 767.98px) {
   .container-rich-text .content {
     font-size: 0.75em;
   }
 }
+.container-rich-text .content ul {
+  color: #919191;
+  line-height: 2em;
+  font-size: 1.25em;
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 10px auto 30px auto;
+}
+.container-rich-text .content ul li {
+  padding-bottom: 5px;
+}
+.container-rich-text .content ul li:before {
+  content: "\2022";
+  color: #383838;
+  font-weight: bold;
+  font-size: 1em;
+  display: inline-block;
+  width: 0.625em;
+}
+.container-rich-text .content strong {
+  color: #383838;
+}
 .container-rich-text .content p {
   margin: 0px 0px 30px 0px;
   line-height: 2em;
+  color: #919191;
 }
 .container-rich-text .content h2 {
   font-size: 3.5em;
   text-align: left;
   color: #383838;
-  margin: 40px auto 15px auto;
+  margin: 50px auto 15px auto;
 }
 @media only screen and (max-width: 767.98px) {
   .container-rich-text .content h2 {
@@ -1764,8 +1816,12 @@ body {
 .container-rich-text .content h3 {
   font-size: 2.75em;
   text-align: left;
-  color: #383838;
-  margin: 30px auto 10px auto;
+  color: #ffffff;
+  margin: 0px auto 10px auto;
+  background: linear-gradient(to right, #FFAE46, #FF428D);
+  width: auto;
+  display: inline-block;
+  padding: 10px 20px;
 }
 @media only screen and (max-width: 767.98px) {
   .container-rich-text .content h3 {
@@ -1773,16 +1829,16 @@ body {
   }
 }
 .container-rich-text .content .carousel {
-  margin: 70px -25%;
+  margin: 55px -25%;
 }
 @media only screen and (max-width: 1199.98px) {
   .container-rich-text .content .carousel {
-    margin: 60px -20%;
+    margin: 55px -20%;
   }
 }
 @media only screen and (max-width: 991.98px) {
   .container-rich-text .content .carousel {
-    margin: 60px 0px;
+    margin: 55px 0px;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -1891,16 +1947,16 @@ body {
   }
 }
 .container-rich-text .content .image-embed {
-  margin: 70px -25%;
+  margin: 55px -25%;
 }
 @media only screen and (max-width: 1199.98px) {
   .container-rich-text .content .image-embed {
-    margin: 60px -20%;
+    margin: 55px -20%;
   }
 }
 @media only screen and (max-width: 991.98px) {
   .container-rich-text .content .image-embed {
-    margin: 60px -15px;
+    margin: 55px -15px;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -1912,6 +1968,7 @@ body {
   margin: 40px 0px;
 }
 .container-rich-text .content .simple-quote {
+  color: #383838;
   font-size: 2em;
   font-family: 'QuestaGrande', sans-serif;
   background: url("../images/picto-quote.png") top left no-repeat no-repeat;
@@ -1926,13 +1983,15 @@ body {
   }
 }
 .container-rich-text .content .multiple-quote {
+  color: #383838;
   font-weight: bold;
   font-size: 1.75em;
-  margin: 60px 0px;
+  margin: 45px 0px;
+  line-height: 1.5em;
 }
 @media only screen and (max-width: 767.98px) {
   .container-rich-text .content .multiple-quote {
-    margin: 40px 0px;
+    margin: 30px 0px;
   }
 }
 .container-rich-text .content .multiple-quote .border-top-quote {
@@ -2201,3 +2260,4 @@ html[xmlns] .clearfix {
     box-shadow: none !important;
   }
 }
+/*# sourceMappingURL=style.css.map */
