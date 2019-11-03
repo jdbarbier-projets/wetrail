@@ -45,10 +45,11 @@
             <div class="ezxml-text">
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
             </div>
-            <div>
-                <iframe width="100%" height="500px" frameborder="0" allowfullscreen src="https://umap.openstreetmap.fr/fr/map/trail-truffieres_382992?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false"></iframe><p><a href="https://umap.openstreetmap.fr/fr/map/trail-truffieres_382992">Voir en plein écran</a></p>
+        </div>
+        <div class="iframe-parcours">
 
-            </div>
+            <iframe width="100%" height="300px" frameborder="0" allowfullscreen src="https://umap.openstreetmap.fr/fr/map/trail-des-truffieres-2019_383395?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false&tap=false"></iframe><p><a href="https://umap.openstreetmap.fr/fr/map/trail-des-truffieres-2019_383395">Voir en plein écran</a></p>
+
         </div>
         <div class="content">
             <div class="ezxml-text">
@@ -109,10 +110,10 @@
 
     <div class="container container-medium">
         <div class="article-author row">
-            <div class="author-image col-12 col-md-5 col-xl-4">
+            <div class="author-image col-12 col-md-4">
                 <img class="img-cover" src="images/img-autheur.jpg" />
             </div>
-            <div class="author-details col-12 col-md-7 col-xl-8">
+            <div class="author-details col-12 col-md-8">
                 <div class="author-title text-center text-md-left text-uppercase">Écrit par</div>
                 <div class="author-name text-center text-md-left">Alexia Labbé</div>
                 <div class="author-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis</div>

@@ -27,21 +27,25 @@
         <div class="carousel-inner">
             <div class="carousel-item active" data-interval="5000" style="background-image: url('images/festival-templiers.jpg');">
                 <div class="carousel-caption">
-                    <span class="infos"> 15.09.2019 | Millau, France | Trail</span>
-                    <h2>Les templiers</h2>
-                    <p class="white">Notre compte rendu du fameux festival des templiers</p>
-                    <div class="buttons">
-                        <a href="#" class="btn btn-rond">Lire l'article</a>
+                    <div class="carousel-caption-content">
+                        <span class="infos"> 15.09.2019 | Millau, France | Trail</span>
+                        <h2>Les templiers</h2>
+                        <p class="white">Notre compte rendu du fameux festival des templiers</p>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-rond">Lire l'article</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item" data-interval="5000" style="background-image: url('images/viaduc-millau.jpg');">
                 <div class="carousel-caption">
-                    <span class="infos"> 12.05.2019 | Millau, France | Trail</span>
-                    <h2>Course du Viaduc</h2>
-                    <p class="white">Notre compte rendu de la Course Eiffage du Viaduc de Millau</p>
-                    <div class="buttons">
-                        <a href="#" class="btn btn-rond">Lire l'article</a>
+                    <div class="carousel-caption-content">
+                        <span class="infos"> 12.05.2019 | Millau, France | Trail</span>
+                        <h2>Course du Viaduc</h2>
+                        <p class="white">Notre compte rendu de la Course Eiffage du Viaduc de Millau</p>
+                        <div class="buttons">
+                            <a href="#" class="btn btn-rond">Lire l'article</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,25 +72,25 @@
 <div id="topics" class="container container-large">
     <h2>Sujets</h2>
     <div class="row">
-        <div class="topic-item col-12 col-sm-6 col-xl-3">
+        <div class="topic-item col-6 col-sm-3">
             <a href="#" class="thumbnail">
                 <img class="img-cover" alt="" src="images/light_stairs_nature.jpg" />
                 <span>Trails</span>
             </a>
         </div>
-        <div class="topic-item col-12 col-sm-6 col-xl-3">
+        <div class="topic-item col-6 col-sm-3">
             <a href="#" class="thumbnail">
                 <img class="img-cover" alt="" src="images/trail_bag.jpg" />
                 <span>Équipements</span>
             </a>
         </div>
-        <div class="topic-item col-12 col-sm-6 col-xl-3">
+        <div class="topic-item col-6 col-sm-3">
             <a href="#" class="thumbnail">
                 <img class="img-cover" alt="" src="images/deadlift.jpg" />
                 <span>Entrainements</span>
             </a>
         </div>
-        <div class="topic-item col-12 col-sm-6 col-xl-3">
+        <div class="topic-item col-6 col-sm-3">
             <a href="#" class="thumbnail">
                 <img class="img-cover" alt="" src="images/healthy_food.jpg" />
                 <span>Alimentation</span>

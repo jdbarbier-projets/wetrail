@@ -27,24 +27,24 @@
                 <div class="category">Récupération</div>
                 <h1>Nos gauffres à la myrtille pour un réveil sportif</h1>
                 <p class="introduction">Trail it est un blog lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales id massa sed lobortis. Pellentesque nisi mauris, dictum quis magna a, dignissim feugiat dui. Cras sed est eu odio bibendum sagittis. Pellentesque at sem dui. Proin est nunc, vulputate sit amet facilisis a, pharetra ut purus. Sed mollis lacus massa, in consectetur arcu efficitur ac. Integer vel ligula lorem. Integer porttitor metus eget interdum hendrerit.</p>
-                <div class="recipe-infos">
-                    <div class="duration float-md-left">
+                <div class="recipe-infos row">
+                    <div class="duration col-6 col-sm-4 col-md-2 col-lg-4 col-xl-2">
                         <img src="images/picto-time.png" alt="" />
                         40 min
                     </div>
-                    <div class="recipe-parts float-md-left">
+                    <div class="recipe-parts col-6 col-sm-4 col-md-2 col-lg-4 col-xl-2">
                         <img src="images/picto-cuisson.png" alt="" />
                         10 min
                     </div>
-                    <div class="recipe-parts float-md-left">
+                    <div class="recipe-parts col-6 col-sm-4 col-md-2 col-lg-4 col-xl-2">
                         <img src="images/picto-niveau.png" alt="" />
                         Facile
                     </div>
-                    <div class="recipe-parts float-md-left">
+                    <div class="recipe-parts col-6 col-sm-4 col-md-3 col-lg-4 col-xl-2">
                         <img src="images/picto-cout.png" alt="" />
                         Bon marché
                     </div>
-                    <div class="recipe-parts float-md-left">
+                    <div class="recipe-parts col-6 col-sm-4 col-md-3 col-lg-4 col-xl-2">
                         <img src="images/picto-personnes.png" alt="" />
                         4 Personnes
                     </div>
@@ -55,7 +55,7 @@
 
     <div class="container container-large">
         <div class="recipe-content row">
-            <div class="recipe-ingredients col-12 col-md-4 offset-lg-1 col-lg-4">
+            <div class="recipe-ingredients sticky-lg col-12 col-md-4 offset-lg-1 col-lg-4">
                 <div class="recipe-title">Ingrédients</div>
                 <div class="ingredients-section">
                     <div class="section-title">Pour les gauffres</div>
@@ -102,6 +102,12 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat.</p>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <div class="container container-large">
+        <div class="recipe-content row">
 
             <div class="recipe-final-image object image-embed col-12">
                 <img class="img-fluid img-cover" src="images/photo-art-recette-03.jpg" alt="" />

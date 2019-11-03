@@ -16,7 +16,7 @@
 @greyOverlayOpacity: rgba(100, 100, 100, 0.5);
 @blackLightGradient : linear-gradient(180deg,transparent,transparent 0%,rgba(0,0,0,0.5) 96%,rgba(0,0,0,0));
 @veryLightGradient :linear-gradient(180deg,transparent 10%,rgba(0,0,0,0.1) 50%, transparent 90%);
-@blackGradient : linear-gradient(180deg, transparent, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 10%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, .6) 100%);
+@blackGradient : linear-gradient(180deg, transparent, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, .3) 100%);
 @ProximaNova: 'ProximaNova', sans-serif;
 @QuestaGrande: 'QuestaGrande', sans-serif;
 @laptop:             ~"only screen and (max-width: 1365.98px)";
@@ -24,15 +24,14 @@
 @tabletportrait:     ~"only screen and (max-width: 991.98px)";
 @mobile:             ~"only screen and (max-width: 767.98px)";
 @mobileportrait:     ~"only screen and (max-width: 575.98px)";
-@tablet-and-desktop: ~"only screen and (min-width: 1024px)";
 @transition-ease: all 0.5s ease;
 @transition-visibility-linear : visibility 0s, opacity 0.3s linear;
 @box-shadow-light : 0 10px 10px -10px rgba(0,0,0,0.4);
 @box-shadow-filter-bars : 0 5px 5px rgba(0, 0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1), 5px 0px 5px rgba(0, 0, 0, 0.1);
+@box-shadow-filter-progressbars : 0px 1px 10px 0px rgba(0, 0, 0, 0.1), 0px 0px 3px rgba(0, 0, 0, 0.1), 3px 3px 4px rgba(0, 0, 0, 0.1);
+@box-shadow-filter-bars-light : 0 5px 5px rgba(0, 0, 0, 0.05), -5px 0px 5px rgba(0, 0, 0, 0.05), 5px 0px 5px rgba(0, 0, 0, 0.05);
 @box-shadow-news : 0 4px 19px 0 rgba(58,58,60,0.25);
 @box-shadow-news-light : 0 2px 5px 0 rgba(58, 58, 60, 0.10);
-@color1: #dddddd; // Appears 2 times
-@color2: #333333; // Appears 2 times
 
 
 /*=== FONTS ===*/
@@ -112,28 +111,25 @@ body {
     .navbar-right {
       background-color: @white;
       justify-content: flex-end;
-      @media @tabletportrait {
-        min-height: 100vh;
-        height: calc(100vh - 70px);
-        overflow-y: auto;
-      }
       .navbar-nav {
         @media @tabletportrait {
-          margin: 0px 30px;
-        }
-        @media @mobileportrait {
-          margin: 0px 15px;
+          overflow-y: scroll;
+          flex-direction: initial;
         }
         .nav-item {
           position: static !important;
           line-height: 80px;
           @media @tabletportrait {
+            margin: 0px 30px;
             line-height: 60px;
             border-bottom: 1px solid lightgrey;
             width: 100%;
             &:last-child {
               border-bottom: none;
             }
+          }
+          @media @mobileportrait {
+            margin: 0px 15px;
           }
 
           .nav-item-content {
@@ -365,47 +361,67 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    @media @mobile {
+      height: 200vh;
+    }
+    @media @mobileportrait {
+      height: 100vh;
+    }
     transition: all 1s ease-out;
     .carousel-caption {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       width: 100%;
-      right: 0%;
-      left: 0%;
-      bottom: 35%;
-      @media @tablet {
-        bottom: 30%;
-      }
-      @media @mobile {
-        top: 15%;
-      }
-      padding: 30px 0px;
-      @media @mobile {
-        padding: 30px;
-      }
-      background: @greyopacity;
-      color: @white;
-      .infos {
-        font-size: 1em;
-      }
-      h2 {
-        text-transform: uppercase;
-        font-size: 3.5em;
+      color: #fff;
+      text-align: center;
+      transition: opacity .15s ease;
+      .carousel-caption-content {
+        width: 100%;
+        height: 300px;
+        background: no-repeat 50%/100% 100%;
+        padding: 30px 0px;
         @media @mobile {
-          font-size: 2.5em;
+          height: 325px;
         }
-        font-family: @ProximaNova;
-        font-weight: 900;
+        background: @greyopacity;
         color: @white;
-        padding: 10px 0px;
-        margin: 0px;
-      }
-      p {
-        font-size: 1.25em;
-        @media @mobile {
-          font-size: 1.125em;
+
+        .infos {
+          font-size: 1em;
         }
-      }
-      .buttons {
-        margin-top: 35px;
+
+        h2 {
+          text-transform: uppercase;
+          font-size: 3.5em;
+          @media @mobile {
+            font-size: 2.5em;
+          }
+          font-family: @ProximaNova;
+          font-weight: 900;
+          color: @white;
+          padding: 10px 0px;
+          margin: 0px;
+        }
+
+        p {
+          font-size: 1.25em;
+          @media @mobile {
+            font-size: 1.125em;
+          }
+        }
+
+        .buttons {
+          margin-top: 35px;
+        }
       }
     }
   }
@@ -432,11 +448,15 @@ body {
     margin-bottom: 30px;
     line-height: 1.75em;
     font-size: 1.25em;
+    @media @mobile {
+      font-size: 1em;
+    }
   }
 }
 
 /* Topics bloc */
 #topics {
+  margin-bottom: 100px;
  .topic-item {
    max-height: 600px;
    overflow: hidden;
@@ -447,6 +467,9 @@ body {
        height: 600px;
        @media @tablet {
          height: 300px;
+       }
+       @media @mobile {
+         height: 200px;
        }
        width: 100%;
        transition: @transition-ease;
@@ -462,16 +485,20 @@ body {
        font-weight: 900;
        position: absolute;
        bottom: 10%;
-       @media @mobile {
-         bottom: 40%;
-       }
        text-align: center;
        color: white;
        display: block;
        width: 100%;
        background: @veryLightGradient;
-       @media @mobile {
+       @media @tablet {
          font-size: 1.5em;
+       }
+       @media @mobile {
+         font-size: 1em;
+         bottom: 40%;
+       }
+       @media @mobileportrait {
+         font-size: 1.25em;
        }
      }
    }
@@ -522,6 +549,9 @@ body {
           text-align: left;
           line-height: 1em;
           font-size: 3em;
+          @media @mobile {
+            font-size: 2em;
+          }
           a {
             &:before {
               content: " ";
@@ -539,8 +569,14 @@ body {
           font-size: 1.5em;
           line-height: 1.125em;
           @media @mobile {
-            font-size: 1.125em;
+            font-size: 1em;
           }
+        }
+        .infos {
+          @media @mobile {
+            font-size: 0.875em;
+          }
+
         }
       }
     }
@@ -594,6 +630,9 @@ body {
         font-size: 1.375em;
         color: @white;
       }
+      .total-score .note {
+        margin-right: -7px;
+      }
     }
 
     .articles-filters {
@@ -604,7 +643,7 @@ body {
       text-align: center;
       margin: 0px;
       @media @mobile {
-        bottom: -65px;
+        bottom: -60px;
         padding: 0px;
       }
 
@@ -622,6 +661,7 @@ body {
           @media @mobile {
             justify-content: start;
             overflow-x: scroll;
+            padding-left: 15px;
           }
 
           li {
@@ -727,6 +767,9 @@ body {
           position: relative;
           height: 100%;
           box-shadow: @box-shadow-news-light;
+          @media @mobile {
+            box-shadow: none;
+          }
 
           .thumbnail-content {
             height: 250px;
@@ -749,7 +792,7 @@ body {
             @media @mobile {
               width: 90%;
               margin: 0 auto;
-              box-shadow: @box-shadow-filter-bars;
+              box-shadow: @box-shadow-filter-bars-light;
               padding: 15px;
               margin-top: -30px;
               position: relative;
@@ -841,6 +884,9 @@ body {
     .container {
       ul {
         margin-right: 15%;
+      }
+      .total-score .note{
+        margin-right: -10px;
       }
     }
   }
@@ -942,7 +988,7 @@ body {
             .progress {
               border-radius: 10px;
               background-color: @progressbarGrey;
-              box-shadow: @box-shadow-filter-bars;
+              box-shadow: @box-shadow-filter-progressbars;
               .progress-bar {
                 background: @weTrailGradient;
                 border-radius: 10px;
@@ -975,14 +1021,18 @@ body {
           }
 
           h4 {
-            background: url("../images/picto-plus.png") no-repeat top left;
-            padding-left: 65px;
             line-height: 1.5em;
             border-bottom: 1px solid @verylightgrey;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
             font-weight: normal;
             font-size: 1.375em;
             letter-spacing: 0.125em;
+            img {
+              padding-right: 10px;
+              margin-top: -5px;
+              width: 46px;
+              height: 36px;
+            }
           }
 
           ul {
@@ -994,12 +1044,6 @@ body {
             li {
               line-height: 2em;
               padding: 5px 0px;
-            }
-          }
-
-          .incoveniences {
-            h4 {
-              background: url("../images/picto-moins.png") no-repeat top left;
             }
           }
         }
@@ -1042,7 +1086,7 @@ body {
     }
   }
   .author {
-    margin-top: 80px;
+    margin-top: 10px;
     @media @mobile {
       .item-1 {
         order: 2;
@@ -1087,6 +1131,11 @@ body {
       h2, h3, .buttons  {
         text-align: right !important;
       }
+      .chronos-list {
+        @media @mobile {
+          margin-left: 30%;
+        }
+      }
     }
     .author-item {
       margin: 60px 0px;
@@ -1104,6 +1153,7 @@ body {
         color: @lightgrey;
         font-size: 1em;
         line-height: 2em;
+        margin-bottom: 0px;
       }
       .author-stats {
         h3 {
@@ -1113,9 +1163,12 @@ body {
           font-family: @ProximaNova;
           font-weight: bold;
           text-align: left;
-          margin: 60px auto 5px auto;
+          margin: 30px auto 5px auto;
         }
         .chronos-list {
+          @media @mobile {
+            max-width: 70%;
+          }
           .row {
             margin: 0px;
             .race {
@@ -1149,7 +1202,12 @@ body {
     .author-image {
       margin: 60px 0px;
       @media @mobile {
-        margin: 0px;
+        margin-bottom: 0px;
+      }
+      img {
+        @media @mobile {
+          height: 300px !important;
+        }
       }
     }
   }
@@ -1216,9 +1274,14 @@ body {
         padding-right: 3%;
         @media @tabletportrait {
           padding: 0px 0px 20px 0px;
+          max-height: 700px;
+        }
+        @media @mobile {
+          max-height: 500px;
         }
         img {
           width: 100%;
+          height: 100%;
         }
       }
       .recipe-details {
@@ -1258,23 +1321,33 @@ body {
           text-transform: uppercase;
           margin-top: 60px;
           @media @mobile {
-            margin-top: 0px;
+            margin: 0px 0px 0px 15px;
           }
           div {
-            padding-right: 50px;
             font-size: 0.75em;
             line-height: 1.5em;
+            text-align: center;
+            @media @tablet {
+              text-align: left;
+            }
             @media @mobile {
               padding: 10px 0px;
             }
             img {
-              padding: 0px 10px 20px 0px;
+              display: block;
+              padding: 0px 0px 10px 0px;
+              margin: 0 auto;
+              @media @tablet {
+                padding: 0px 10px 20px 0px;
+                display: inline-block;
+                margin: 0px;
+                width: 45px;
+                height: 55px;
+              }
               @media @mobile {
                 padding: 0px 10px 0px 0px;
                 height: 35px;
               }
-              width: 45px;
-              height: 55px;
             }
           }
         }
@@ -1310,9 +1383,31 @@ body {
           }
           ul {
             font-size: 1em;
+            list-style-type: none;
             li {
               line-height: 2.25em;
+              color: @lightgrey;
+              &:before {
+                content: "\2022";
+                color: @greyblack;
+                font-weight: bold;
+                font-size: 1.25em;
+                display: inline-block;
+                width: 1em;
+                margin-left: -0.875em;
+              }
             }
+          }
+        }
+        &.sticky-lg {
+          position: sticky;
+          top: 150px;
+          height: 100%;
+          z-index : 999;
+          background-color: @white;
+          @media @mobile {
+            position : initial;
+            top: 0px;
           }
         }
       }
@@ -1364,6 +1459,7 @@ body {
 
 /* Bloc auteur */
 .article-author {
+  padding-top: 30px;
   .author-image {
     text-align: center;
     img {
@@ -1387,7 +1483,7 @@ body {
     .author-description {
       color: @lightgrey;
       line-height: 2em;
-      margin: 10px 0px;
+      margin: 10px 0px 20px 0px;
     }
   }
 }
@@ -1395,6 +1491,7 @@ body {
 /* Bloc instagram */
 .instagram-container {
   position: relative;
+  margin-top: 120px !important;
   .instagram-text {
     @media @mobile {
       text-align: right;
@@ -1441,23 +1538,24 @@ body {
       width: 100%;
     }
     img {
+      width: 480px;
+      height: 360px;
+      position: absolute;
       @media @mobile {
         max-height: 220px;
         top: 0px !important;
         left: 0px !important;
-        width: 100% !important;
+        height: 220px;
+        width: calc((100% - 10px)/3) !important;
         position: relative !important;
       }
+
       &.top {
-        @media @mobile {
-          height: auto;
-        }
         width: 480px;
         height: 360px;
         position: absolute;
-        top: 0px;
         right: 0px;
-
+        top: 0px;
       }
 
       &.left {
@@ -1466,9 +1564,6 @@ body {
         position: absolute;
         left: 0px;
         top: 100px;
-        @media @mobile {
-          height: auto;
-        }
       }
 
       &.bottom {
@@ -1477,9 +1572,6 @@ body {
         position: absolute;
         bottom: 0px;
         left: 240px;
-        @media @mobile {
-          height: auto;
-        }
       }
     }
     a {
@@ -1598,6 +1690,9 @@ body {
     @media @mobile {
       font-size: 3.25em;
     }
+    span {
+      font-size: 0.25em;
+    }
   }
   &.black {
     background: @greyblack;
@@ -1626,7 +1721,7 @@ body {
     color: @greyblack;
     p {
       margin: 0px 0px 30px 0px;
-      line-height: 1.875em;
+      line-height: 2em;
     }
     h2 {
       font-size: 3.5em;
@@ -1648,15 +1743,15 @@ body {
     }
 
     .carousel {
-      margin: 20px -25%;
+      margin: 70px -25%;
       @media @tablet {
-        margin: auto -20%;
+        margin: 60px -20%;
       }
       @media @tabletportrait {
-        margin: auto 0px;
+        margin: 60px 0px;
       }
       @media @mobile {
-        margin: 40px 0px;
+        margin: 50px 0px;
       }
       .image {
         padding: 20px 10px 0px 10px;
@@ -1747,15 +1842,15 @@ body {
       }
     }
     .image-embed {
-      margin: 40px -25%;
+      margin: 70px -25%;
       @media @tablet {
-        margin: auto -20%;
+        margin: 60px -20%;
       }
       @media @tabletportrait {
-        margin: auto -15px;
+        margin: 60px -15px;
       }
       @media @mobile {
-        margin: 20px -15px;
+        margin: 50px -15px;
       }
     }
     .embed-button {
@@ -1814,7 +1909,7 @@ h1 {
 
 h2 {
   font-size: 4.25em;
-  color: @black;
+  color: @greyblack;
   @media @tablet {
     font-size: 3.5em;
   }
@@ -1896,7 +1991,7 @@ p {
 }
 
 .container-rich-text {
-  width: 50%;
+  width: 48%;
   max-width: 50%;
   @media @tablet {
     width: 70%;
@@ -1971,10 +2066,10 @@ p {
     padding-left: 50px;
     background: url("../images/picto-strava-blanc.png") no-repeat no-repeat 30px 10px @greyblack;
   }
-}
-
-.btn:hover {
-  color: @white;
+  &:hover {
+    color: @greyblack;
+    background-color: @white;
+  }
 }
 
 .overlay{
@@ -2020,10 +2115,6 @@ p {
   visibility: hidden;
   line-height: 0;
   height: 0;
-}
-
-.fixed-position {
-  position: fixed;
 }
 
 .clearfix {

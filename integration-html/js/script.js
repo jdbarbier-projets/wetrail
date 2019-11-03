@@ -18,6 +18,8 @@ $(document).ready(function(){
         $(".fixed-top.navbar").removeClass("bg-sm-transparent");
         $('.fixed-top .wetrail-logo').addClass('d-block').removeClass('d-none');
         $('.fixed-top .wetrail-logo-white').removeClass('d-block').addClass('d-none');
+        // Set menu height calculation on mobile
+        $('.fixed-top.navbar .menu .navbar-right .navbar-nav').height( $(window).height() - 70 );
     });
     $('.navbar #navbarCollapse').on('hide.bs.collapse', function () {
         $("body").removeClass("fixed-position");

@@ -28,7 +28,7 @@
             <div class="mobile-score d-md-none">
                 <div class="total-score">
                     <div class="text">Notre note</div>
-                    <div class="note">9.2</div>
+                    <div class="note">9.2<span>/10</span></div>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@
             </ul>
             <div class="total-score d-none d-md-block">
                 <div class="text">Notre note</div>
-                <div class="note">9.2</div>
+                <div class="note">9.2<span>/10</span></div>
             </div>
         </div>
     </div>
@@ -159,16 +159,22 @@
                 </div>
                 <div class="container container-large">
                     <div class="pros-and-cons row">
-                        <div class="benefits col-12 col-md-6">
-                            <h4 class="text-left text-uppercase">Les plus</h4>
+                        <div class="benefits col-12 col-sm-6">
+                            <h4 class="text-left text-uppercase">
+                                <img class="img-fluid" src="images/picto-plus.png" alt=""/>
+                                Les plus
+                            </h4>
                             <ul>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</li>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</li>
                             </ul>
                         </div>
-                        <div class="incoveniences col-12 col-md-6">
-                            <h4 class="text-left text-uppercase">Les moins</h4>
+                        <div class="incoveniences col-12 col-sm-6">
+                            <h4 class="text-left text-uppercase">
+                                <img class="img-fluid" src="images/picto-moins.png" alt="" />
+                                Les moins
+                            </h4>
                             <ul>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
                                 <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</li>
@@ -183,14 +189,14 @@
 
     <div class="container container-medium">
         <div class="article-author row">
-            <div class="author-image col-12 col-md-5 col-xl-4">
+            <div class="author-image col-12 col-md-4">
                 <img class="img-cover" src="images/img-autheur.jpg" />
             </div>
-            <div class="author-details col-12 col-md-7 col-xl-8">
+            <div class="author-details col-12 col-md-8">
                 <div class="author-title text-center text-md-left text-uppercase">Écrit par</div>
                 <div class="author-name text-center text-md-left">Alexia Labbé</div>
                 <div class="author-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis</div>
-                <div class="buttons text-uppercase text-center text-md-right">
+                <div class="buttons text-uppercase text-center text-md-left text-xl-right">
                     <a href="#" class="btn btn-rond black padding-large">En savoir plus</a>
                 </div>
             </div>
