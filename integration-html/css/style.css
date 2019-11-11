@@ -1029,6 +1029,8 @@ body {
 #testProduit .summary .full-score .score-details .score-item .progressbar .progress .progress-bar {
   background: linear-gradient(to right, #FFAE46, #FF428D);
   border-radius: 10px;
+  width: 0;
+  transition: width 2s ease;
 }
 #testProduit .summary .full-score .score-details .score-item .ranking {
   font-family: 'ProximaNova', sans-serif;

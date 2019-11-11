@@ -115,7 +115,7 @@
                         <div class="title col-4">Comfort</div>
                         <div class="progressbar col-6 cold-md-7">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="ranking col-2 col-md-1">9.8</div>
@@ -124,7 +124,7 @@
                         <div class="title col-4">Durabilité</div>
                         <div class="progressbar col-6 cold-md-7">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="ranking col-2 col-md-1">7.2</div>
@@ -133,7 +133,7 @@
                         <div class="title col-4">Design</div>
                         <div class="progressbar col-6 cold-md-7">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="ranking col-2 col-md-1">8.4</div>
@@ -142,7 +142,7 @@
                         <div class="title col-4">Souplesse</div>
                         <div class="progressbar col-6 cold-md-7">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="ranking col-2 col-md-1">10</div>
@@ -151,7 +151,7 @@
                         <div class="title col-4">Qualité/prix</div>
                         <div class="progressbar col-6 cold-md-7">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 96%" aria-valuenow="9.6" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                         <div class="ranking col-2 col-md-1">9.6</div>

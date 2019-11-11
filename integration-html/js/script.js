@@ -83,6 +83,8 @@ $(document).ready(function(){
             $('.fixed-top .wetrail-logo').addClass('d-block').removeClass('d-none');
             $('.fixed-top .wetrail-logo-white').removeClass('d-block').addClass('d-none');
         }
+        // ProgressBar Management
+        fillProgressBar();
     });
 
     // Smooth scroll when clicking on anchors
@@ -92,4 +94,27 @@ $(document).ready(function(){
         $("html, body").animate({ scrollTop: anchorPosition }, 2000);
     });
 
+    // ProgressBar Management
+    fillProgressBar();
 });
+
+
+// Management of progressBar animation
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    return (docViewBottom >= elemTop && docViewTop <= elemBottom);
+}
+
+function fillProgressBar() {
+    $('.progress .progress-bar').each(function () {
+        if (isScrolledIntoView($(this))) {
+            $(this).css("width", function () {
+                return $(this).attr("aria-valuenow") + "%";
+            });
+        }
+    });
+}
