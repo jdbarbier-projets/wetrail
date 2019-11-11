@@ -36,12 +36,12 @@
 
     <div class="container container-full-width pictos-line">
         <div class="container container-large">
-            <ul>
-                <li class="trail"><img src="images/picto-chaussure-trail.png" class="with-margin" alt="" />Trail</li>
-                <li class="weight"><img src="images/picto-poids.png" class="with-margin" alt="" />195g (42-H)</li>
-                <li class="drop"><img src="images/picto-drop.png" class="with-margin" alt="" />0mm</li>
-                <li class="duration"><img src="images/picto-sablier.png" alt="" />665km</li>
-                <li class="price"><img src="images/picto-prix.png" alt="" />130€</li>
+            <ul class="pictos-test-line">
+                <li class="trail"><img src="images/picto_trail.svg" alt="" />Trail</li>
+                <li class="weight"><img src="images/picto_poids.svg" alt="" />195g (42-H)</li>
+                <li class="drop"><img src="images/picto_drop.svg" alt="" />0mm</li>
+                <li class="duration"><img src="images/picto_time.svg" alt="" />665km</li>
+                <li class="price"><img src="images/picto_prix.svg" alt="" />130€</li>
             </ul>
             <div class="total-score d-none d-md-block">
                 <div class="text">Notre note</div>
@@ -161,7 +161,7 @@
                     <div class="pros-and-cons row">
                         <div class="benefits col-12 col-sm-6">
                             <h4 class="text-left text-uppercase">
-                                <img class="img-fluid" src="images/picto-plus.png" alt=""/>
+                                <img class="img-fluid" src="images/picto_plus.svg" alt=""/>
                                 Les plus
                             </h4>
                             <ul>
@@ -172,7 +172,7 @@
                         </div>
                         <div class="incoveniences col-12 col-sm-6">
                             <h4 class="text-left text-uppercase">
-                                <img class="img-fluid" src="images/picto-moins.png" alt="" />
+                                <img class="img-fluid" src="images/picto_moins.svg" alt="" />
                                 Les moins
                             </h4>
                             <ul>
@@ -198,6 +198,50 @@
                 <div class="author-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis</div>
                 <div class="buttons text-uppercase text-center text-md-left text-xl-right">
                     <a href="#" class="btn btn-rond black padding-large">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container container-large">
+        <hr />
+
+        <div class="more-content more-recipes">
+            <h2>Plus de tests</h2>
+            <div class="row">
+                <div class="more-content-item col-12 col-md-6 col-xl-4">
+                    <div class="thumbnail-content">
+                        <img class="img-fluid img-cover" src="images/photo-art-recette-related-01.jpg" alt="" />
+                    </div>
+                    <div class="content">
+                        <a href="/integration-html/test.php">Plus de légumes pour mieux digérer</a>
+                        <p class="description d-none d-md-block">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus
+                        </p>
+                    </div>
+                </div>
+                <div class="more-content-item col-12 col-md-6 col-xl-4">
+                    <div class="thumbnail-content">
+                        <img class="img-fluid img-cover" src="images/photo-art-recette-related-02.jpg" alt="" />
+                    </div>
+                    <div class="content">
+                        <a href="#">Nos petits-déjeuners detox</a>
+                        <p class="description d-none d-md-block">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus
+                        </p>
+                    </div>
+                </div>
+                <div class="more-content-item col-12 col-md-6 col-xl-4">
+                    <div class="thumbnail-content">
+                        <img class="img-fluid img-cover" src="images/photo-art-recette-related-03.jpg" alt="" />
+                    </div>
+                    <div class="content">
+                        <a href="#">Les aliments à la mode</a>
+                        <p class="description d-none d-md-block">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -207,7 +207,7 @@
                 </div>
             </div>
         </div>
-        <div class="buttons text-uppercase text-center">
+        <div class="pagination-button buttons text-uppercase text-center">
             <a href="#" class="btn btn-rond black padding-large">Afficher plus</a>
         </div>
     </div>

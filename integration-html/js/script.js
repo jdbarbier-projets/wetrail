@@ -6,10 +6,13 @@ $(document).ready(function(){
         $( this ).find( ".details").fadeToggle( "show hide", "linear" );
     });
 
-    // Zoom effect on image and shadow effect on  bloc for new on hover & touch
-    $(".news-list .news-item a, .news-list .news-item .thumbnail-content").hover(function(){
+    // Zoom effect on image and shadow effect on block for new on hover & touch
+    $(".news-item a, .news-item img, .more-content-item a, .more-content-item img").hover(function(){
         $( this ).parent().parent().find( ".img-cover").toggleClass("hover" );
-        $( this ).parent().parent().toggleClass("hover" );
+    });
+    // Special effect for box-shadow on list page
+    $(".news-item .news-content, .news-item .thumbnail-content").hover(function(){
+        $( this ).parent().toggleClass("hover" );
     });
 
     // Navigation menu classes
@@ -62,6 +65,9 @@ $(document).ready(function(){
         $('.fixed-top').removeClass('bg-sm-transparent');
         $('.fixed-top .wetrail-logo').addClass('d-block').removeClass('d-none');
         $('.fixed-top .wetrail-logo-white').removeClass('d-block').addClass('d-none');
+        if ( !$('.zones .header-cover').length && !$('.zones #carouselHome').length ) {
+            $('.fixed-top').removeClass('no-shadow');
+        }
     }
     $(window).scroll(function(){
         $('.fixed-top').removeClass('no-shadow');

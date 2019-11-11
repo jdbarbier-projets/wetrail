@@ -3,7 +3,7 @@
         <div class="row">
             <div class="footer-logo col-12 col-md-3">
                 <a class="navbar-brand" href="/">
-                    <img class="d-none d-md-block" src="images/logo.png" alt="weTrail">
+                    <img class="logo-wetrail d-none d-md-block" src="images/logo-we-trail.svg" alt="weTrail">
                     <img class="d-block d-md-none" src="images/logo-we-trail-footer.png" alt="weTrail">
                 </a>
             </div>

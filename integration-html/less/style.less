@@ -14,6 +14,7 @@
 @yellowGold : #ffae46;
 @pinkWeTrail : #FF428D;
 @summaryBackground : #f4f4f4f4;
+@footerBackground: #fafafafa;
 @greyopacity: rgba(0,0,0,0.4);
 @greyOverlayOpacity: rgba(100, 100, 100, 0.5);
 @blackLightGradient : linear-gradient(180deg,transparent,transparent 0%,rgba(0,0,0,0.5) 96%,rgba(0,0,0,0));
@@ -105,6 +106,10 @@ body {
         float: left;
         padding: 13px 5px 0px 5%;
       }
+      img {
+        height: 35px;
+        width: auto;
+      }
     }
   }
   .container.menu {
@@ -159,9 +164,20 @@ body {
                 line-height: 1.5em;
                 font-size: 1.125em;
               }
-
               &:hover {
                 color: @lightgrey;
+              }
+              &.dropdown-toggle {
+                img {
+                  width: 10px;
+                  color: @lightgrey;
+                  transition: transform 0.5s ease-in-out;
+                }
+                &:after {
+                  content: none;
+                  border: none;
+                  margin-left: 0px;
+                }
               }
             }
 
@@ -171,6 +187,9 @@ body {
 
             &.show .nav-link {
               color: @lightgrey;
+              img {
+                transform: rotate(180deg);
+              }
             }
           }
 
@@ -299,8 +318,10 @@ body {
 /* Footer */
 .page-footer {
   color: @lightgrey;
+  background-color: @footerBackground;
   font-size: 0.875em;
-  margin-top: 90px;
+  margin-top: 0px;
+  padding-top: 50px;
   @media @mobile {
     width: 80%;
     margin: 0px auto;
@@ -311,6 +332,12 @@ body {
       margin-top: 0px;
     }
     .footer-logo {
+      .navbar-brand {
+        .logo-wetrail {
+          height: 35px;
+          width: auto;
+        }
+      }
       @media @mobile {
         text-align: center;
       }
@@ -466,7 +493,6 @@ body {
    max-height: 600px;
    overflow: hidden;
    padding: 0px;
-   margin: 0px -1px;
    .thumbnail {
      img {
        height: 600px;
@@ -512,6 +538,7 @@ body {
 
 /* Latests posts bloc */
 #latestsPosts {
+  margin-bottom: 0px;
   .row {
     height: 500px;
     overflow: hidden;
@@ -589,7 +616,6 @@ body {
 }
 
 
-/*=== Page LISTE ARTICLES ===*/
 .zones {
   .header-cover {
     height: 80vh;
@@ -719,7 +745,7 @@ body {
       }
 
       ul {
-        padding: 0px;
+        padding: 3px 0px 0px 0px;
         margin: 0px;
         height: 90px;
         line-height: 90px;
@@ -746,11 +772,21 @@ body {
 
           img {
             margin-right: 10px;
-
-            &.with-margin {
-              margin-bottom: 10px;
-            }
+            width: auto;
+            height: 35px;
+            margin-bottom: 10px;
           }
+        }
+      }
+      .pictos-test-line {
+        .weight img, .drop img {
+          height: 28px;
+        }
+        .price img {
+          margin-right: 5px;
+        }
+        img {
+          height: 30px;
         }
       }
     }
@@ -784,9 +820,11 @@ body {
               height: 250px;
               width: 100%;
               transition: @transition-ease;
-
               &.hover {
                 transform: scale(1.1);
+              }
+              &:hover {
+                cursor: pointer;
               }
             }
           }
@@ -869,6 +907,9 @@ body {
         }
       }
     }
+  }
+  .pagination-button {
+    margin: 30px auto 120px auto;
   }
 }
 
@@ -1264,7 +1305,7 @@ body {
 
 /*=== Page RECETTE ===*/
 #recipe {
-  p {
+  .introdiuction, .recipe-content p {
     font-size: 1em;
     line-height: 2em;
   }
@@ -1342,6 +1383,8 @@ body {
               display: block;
               padding: 0px 0px 10px 0px;
               margin: 0 auto;
+              height: 45px;
+              width: auto;
               @media @tablet {
                 padding: 0px 10px 20px 0px;
                 display: inline-block;
@@ -1597,7 +1640,7 @@ body {
 
 /* Bloc "more or related content" */
 .more-content {
-  margin: 80px auto 120px auto;
+  margin: 80px auto 0px auto;
   h2 {
     color: @greyblack;
     font-size: 3em;
@@ -1609,8 +1652,13 @@ body {
   .more-content-item {
     margin-bottom: 50px;
     .thumbnail-content {
+      overflow: hidden;
       img {
         width: 100%;
+        transition: @transition-ease;
+        &.hover {
+          transform: scale(1.1);
+        }
       }
       &:hover {
         cursor: pointer;
@@ -1730,6 +1778,7 @@ body {
         }
         a {
           color: @lightgrey;
+          line-height: 2em;
         }
       }
     }
@@ -1927,13 +1976,15 @@ body {
       color: @greyblack;
       font-size: 2em;
       font-family: @QuestaGrande;
-      background: url("../images/picto-quote.png") top left no-repeat no-repeat;
-      padding-left: 80px;
       margin: 70px 0px;
-      line-height: 1.875em;
+      line-height: 1.5em;
       @media @mobile {
         margin: 20px 0px;
         line-height: 1.125em;
+      }
+      img {
+        height: 40px;
+        margin-right: 20px;
       }
     }
     .multiple-quote {

@@ -4,8 +4,8 @@
     <div class="container container-large container-full-width-laptop menu">
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">☰</button>
         <a class="navbar-brand" href="homepage.php">
-            <img class="wetrail-logo d-none d-lg-block" src="images/logo-we-trail.png" alt="weTrail">
-            <img class="wetrail-logo-white d-block d-lg-none" src="images/logo-we-trail-blanc.png" alt="weTrail">
+            <img class="wetrail-logo d-none d-lg-block" src="images/logo-we-trail.svg" alt="weTrail">
+            <img class="wetrail-logo-white d-block d-lg-none" src="images/logo_wetrail_blanc.svg" alt="weTrail">
         </a>
         <div class="clearfix d-block d-lg-none"></div>
         <div id="navbarCollapse" class="navbar-collapse collapse navbar-right">
@@ -13,7 +13,11 @@
                 <li class="dropdown menu-large nav-item">
                     <div class="nav-item-content">
                         <img class="img-fluid menu-mobile-image d-block d-lg-none" alt="" src="images/img-menu-mobile-trail.jpg" />
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Trails</a>
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            Trails
+                            <img class="d-none" src="images/picto_fleche_menu.svg" alt="" />
+                            <img src="images/picto_fleche_menu_light_grey.svg" alt="" />
+                        </a>
                         <ul class="dropdown-menu megamenu">
                             <li class="dropdown-item container container-large container-full-width-tablet no-margin">
                                 <div class="row">
@@ -46,7 +50,10 @@
                 <li class="dropdown menu-large nav-item">
                     <div class="nav-item-content">
                         <img class="img-fluid menu-mobile-image d-block d-lg-none" alt="" src="images/img-menu-mobile-a-propos.jpg" />
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Équipement</a>
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            Équipements
+                            <img class="d-none" src="images/picto_fleche_menu.svg" alt="" />
+                            <img src="images/picto_fleche_menu_light_grey.svg" alt="" /></a>
                         <ul class="dropdown-menu megamenu">
                             <li class="dropdown-item container container-large container-full-width-tablet no-margin">
                                 <div class="row">
@@ -102,7 +109,10 @@
                 <li class="dropdown menu-large nav-item">
                     <div class="nav-item-content">
                         <img class="img-fluid menu-mobile-image d-block d-lg-none" alt="" src="images/img-menu-mobile-trail.jpg" />
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Entrainement</a>
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            Entrainements
+                            <img class="d-none" src="images/picto_fleche_menu.svg" alt="" />
+                            <img src="images/picto_fleche_menu_light_grey.svg" alt="" /></a>
                         <ul class="dropdown-menu megamenu">
                             <li class="dropdown-item container container-large container-full-width-tablet no-margin">
                                 <div class="row">
@@ -158,7 +168,11 @@
                 <li class="dropdown menu-large nav-item">
                     <div class="nav-item-content">
                         <img class="img-fluid menu-mobile-image d-block d-lg-none" alt="" src="images/img-menu-mobile-alimentation.jpg" />
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Alimentation</a>
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            Alimentation
+                            <img class="d-none" src="images/picto_fleche_menu.svg" alt="" />
+                            <img src="images/picto_fleche_menu_light_grey.svg" alt="" />
+                        </a>
                         <ul class="dropdown-menu megamenu">
                             <li class="dropdown-item container container-large container-full-width-tablet no-margin">
                                 <div class="row">

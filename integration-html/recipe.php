@@ -29,23 +29,23 @@
                 <p class="introduction">Trail it est un blog lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales id massa sed lobortis. Pellentesque nisi mauris, dictum quis magna a, dignissim feugiat dui. Cras sed est eu odio bibendum sagittis. Pellentesque at sem dui. Proin est nunc, vulputate sit amet facilisis a, pharetra ut purus. Sed mollis lacus massa, in consectetur arcu efficitur ac. Integer vel ligula lorem. Integer porttitor metus eget interdum hendrerit.</p>
                 <div class="recipe-infos row">
                     <div class="duration col-6 col-sm-4 col-md-2 col-lg-4 col-xl-2">
-                        <img src="images/picto-time.png" alt="" />
+                        <img src="images/picto_temps_preparation.svg" alt="" />
                         40 min
                     </div>
                     <div class="recipe-parts col-6 col-sm-4 col-md-2 col-lg-4 col-xl-2">
-                        <img src="images/picto-cuisson.png" alt="" />
+                        <img src="images/picto_temps_cuisson.svg" alt="" />
                         10 min
                     </div>
                     <div class="recipe-parts col-6 col-sm-4 col-md-2 col-lg-4 col-xl-2">
-                        <img src="images/picto-niveau.png" alt="" />
+                        <img src="images/picto_niveau_recette.svg" alt="" />
                         Facile
                     </div>
                     <div class="recipe-parts col-6 col-sm-4 col-md-3 col-lg-4 col-xl-2">
-                        <img src="images/picto-cout.png" alt="" />
+                        <img src="images/picto_prix_recette.svg" alt="" />
                         Bon marché
                     </div>
                     <div class="recipe-parts col-6 col-sm-4 col-md-3 col-lg-4 col-xl-2">
-                        <img src="images/picto-personnes.png" alt="" />
+                        <img src="images/picto_personnes.svg" alt="" />
                         4 Personnes
                     </div>
                 </div>

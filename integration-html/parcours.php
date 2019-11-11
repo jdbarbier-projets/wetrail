@@ -31,11 +31,11 @@
     <div class="container container-full-width pictos-line">
         <div class="container container-rich-text">
             <ul>
-                <li class="distance"><img src="images/picto-distance.png" class="with-margin" alt="" />25,2km</li>
-                <li class="elevation-gain"><img src="images/picto-d-plus.png" class="with-margin" alt="" />842D+</li>
-                <li class="elevation-drop"><img src="images/pictlo-d-moins.png" class="with-margin" alt="" />627D+</li>
-                <li class="duration"><img src="images/picto-temps.png" alt="" />2h43'01"</li>
-                <li class="gpx"><a href="#"><img src="images/picto-gpx.png" alt="" /></a></li>
+                <li class="distance"><img src="images/picto_distance.svg" class="with-margin" alt="" />25,2km</li>
+                <li class="elevation-gain"><img src="images/picto_denivele_positif.svg" class="with-margin" alt="" />842D+</li>
+                <li class="elevation-drop"><img src="images/picto_denivele_negatif.svg" class="with-margin" alt="" />627D+</li>
+                <li class="duration"><img src="images/picto_chrono.svg" alt="" />2h43'01"</li>
+                <li class="gpx"><a href="#"><img src="images/picto_gpx.svg" alt="" /></a></li>
             </ul>
         </div>
     </div>
@@ -56,7 +56,10 @@
                 <h2>Un parcours ludique</h2>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                 <p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                <div class="simple-quote">Un trail vaut tous les escaliers du monde</div>
+                <div class="simple-quote">
+                    <img class="float-left" src="images/picto_quote.svg" alt=""" />
+                    Un trail vaut tous les escaliers du monde
+                </div>
             </div>
             <div class="carousel large-height">
                 <div class="row">
@@ -128,7 +131,7 @@
         <hr />
 
         <div class="more-content more-articles">
-            <h2>Plus d'articles</h2>
+            <h2>Plus de parcours</h2>
             <div class="row">
                 <div class="more-content-item col-12 col-md-6 col-xl-4">
                     <div class="thumbnail-content">
