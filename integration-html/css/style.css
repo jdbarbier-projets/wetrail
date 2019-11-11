@@ -40,6 +40,9 @@ body {
   padding: 0px;
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.4);
 }
+.fixed-top.navbar.no-shadow {
+  box-shadow: none;
+}
 @media only screen and (max-width: 991.98px) {
   .fixed-top.navbar {
     display: block;

@@ -46,11 +46,17 @@ $(document).ready(function(){
         window.location.href = $( this ).parent().find( ".content a").attr("href");
     });
 
+    // Management of shadow effect on menu (disabled if no header-cover)
+    if ( !$('.zones .header-cover').length && !$('.zones #carouselHome').length ) {
+        $('.fixed-top').addClass('no-shadow');
+    }
+
     // Management of transparent header on mobile //
-    if( $('.fixed-top').offset().top < 200 ) {
+    if( $('.fixed-top').offset().top < 150 ) {
         $('.fixed-top').addClass('bg-sm-transparent');
         $('.fixed-top .wetrail-logo').addClass('d-none').removeClass('d-block');
         $('.fixed-top .wetrail-logo-white').removeClass('d-none').addClass('d-block');
+
     }
     else {
         $('.fixed-top').removeClass('bg-sm-transparent');
@@ -58,10 +64,14 @@ $(document).ready(function(){
         $('.fixed-top .wetrail-logo-white').removeClass('d-block').addClass('d-none');
     }
     $(window).scroll(function(){
-        if($(window).scrollTop() < 200) {
+        $('.fixed-top').removeClass('no-shadow');
+        if($(window).scrollTop() < 150) {
             $('.fixed-top').addClass('bg-sm-transparent');
             $('.fixed-top .wetrail-logo').addClass('d-none').removeClass('d-block');
             $('.fixed-top .wetrail-logo-white').removeClass('d-none').addClass('d-block');
+            if ( !$('.zones .header-cover').length && !$('.zones #carouselHome').length ) {
+                $('.fixed-top').addClass('no-shadow');
+            }
         } else{
             $('.fixed-top').removeClass('bg-sm-transparent');
             $('.fixed-top .wetrail-logo').addClass('d-block').removeClass('d-none');
