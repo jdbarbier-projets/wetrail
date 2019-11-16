@@ -220,11 +220,14 @@ body {
                     @media @tabletportrait {
                       padding: 8px 0px;
                       width: 60%;
+                      text-align: left;
+                      line-height: 1em;
                     }
                     img {
                       height: 400px;
                       width: 100%;
                       transition: @transition-ease;
+                      filter: brightness(95%);
 
                       &:hover {
                         transform: scale(1.1);
@@ -232,12 +235,19 @@ body {
                     }
 
                     span {
-                      font-size: 2em;
+                      font-size: 1.875em;
                       font-weight: 900;
                       position: absolute;
-                      bottom: 60%;
+                      top: 25%;
+                      left: 50%;
+                      -webkit-transform: translateX(-50%);
+                      transform: translateX(-50%);
                       text-align: center;
                       color: @white;
+                      @media @tablet {
+                        font-size: 1.625em;
+                        padding: 5%;
+                      }
                       @media @tabletportrait {
                         color: @lightgrey;
                         position: relative;
@@ -246,13 +256,17 @@ body {
                         background: none;
                         text-align: left;
                         font-weight: normal;
+                        left: initial;
+                        top: initial;
+                        -webkit-transform: none;
+                        transform: none;
+                        padding: 0px;
                       }
-                      display: block;
-                      width: 100%;
-                      background: @veryLightGradient;
+                      background: radial-gradient(rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 25%, transparent 60%);
                       white-space: pre-wrap;
                       line-height: 1em;
-                      height: 2em;
+                      padding: 2%;
+                      width: 100%;
                     }
 
                     .button {

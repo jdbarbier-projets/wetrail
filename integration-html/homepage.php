@@ -11,6 +11,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
     <title>WeTrail</title>
@@ -25,7 +26,7 @@
     <!-- Carousel -->
     <div id="carouselHome" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="5000" style="background-image: url('images/festival-templiers.jpg');">
+            <div class="carousel-item active" data-interval="5000" style="background-image: url('images/test-hp.jpg');">
                 <div class="carousel-caption">
                     <div class="carousel-caption-content">
                         <span class="infos"> 15.09.2019 | Millau, France | Trail</span>
@@ -37,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" data-interval="5000" style="background-image: url('images/viaduc-millau.jpg');">
+            <div class="carousel-item" data-interval="5000" style="background-image: url('images/test-hp02.jpg');">
                 <div class="carousel-caption">
                     <div class="carousel-caption-content">
                         <span class="infos"> 12.05.2019 | Millau, France | Trail</span>
@@ -61,7 +62,7 @@
     </div>
 </div>
 
-<div class="container container-medium presentation">
+<div class="container container-medium presentation animated">
     <img class="presentation-image img-cover" src="images/us.jpg" />
     <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor vehicula enim, sit amet suscipit nisl mollis a. Vivamus iaculis sagittis mollis. Quisque sit amet nibh sit amet lacus posuere accumsan. Praesent hendrerit laoreet eros ac tristique. Nulla facilisi. Sed congue lorem condimentum neque vehicula volutpat. Praesent interdum quam vel lorem luctus tristique. Integer sed ex nec massa efficitur euismod.</p>
     <div class="buttons text-uppercase">
@@ -69,7 +70,7 @@
     </div>
 </div>
 
-<div id="topics" class="container container-large">
+<div id="topics" class="container container-large animated">
     <h2>Sujets</h2>
     <div class="row">
         <div class="topic-item col-6 col-sm-3">
@@ -99,7 +100,7 @@
     </div>
 </div>
 
-<div id="latestsPosts" class="container container-full-width">
+<div id="latestsPosts" class="container container-full-width animated">
     <h2>Nos derniers posts</h2>
     <div class="row">
         <div class="post-item col-12 col-md-7 col-xl-8" style="background-image: url('images/trail_batons.jpg');">

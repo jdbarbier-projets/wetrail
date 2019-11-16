@@ -36,6 +36,17 @@ $(document).ready(function(){
         $( this ).parent().parent().parent().removeClass("menu-deployed");
     });
 
+    // Add slideDown animation to Bootstrap dropdown when expanding.
+    $('.dropdown').on('show.bs.dropdown', function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).slideDown(500);
+    });
+
+    // Add slideUp animation to Bootstrap dropdown when collapsing.
+    $('.dropdown').on('hide.bs.dropdown', function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).slideUp(400);
+    });
+
+
     // Set the height of author image of the "about us" page
     $("#aboutUs .author .author-image img").height( $("#aboutUs .author .author-item").height() );
 
@@ -85,6 +96,13 @@ $(document).ready(function(){
         }
         // ProgressBar Management
         fillProgressBar();
+
+        // Animation management
+        $('.animated').each(function() {
+            if (isScrolledIntoView(this) === true) {
+                $(this).addClass('slideInUp slow');
+            }
+        });
     });
 
     // Smooth scroll when clicking on anchors
@@ -96,6 +114,7 @@ $(document).ready(function(){
 
     // ProgressBar Management
     fillProgressBar();
+
 });
 
 

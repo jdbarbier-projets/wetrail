@@ -20,7 +20,7 @@
 <div id="parcours" class="zones">
     <div class="container container-full-width header-cover mb-0">
         <div class="opacity-filter light"></div>
-        <img class="img-cover" src="images/running-night.jpg" alt="" />
+        <img class="img-cover" src="images/test-image-cover.jpg" alt="" />
         <div class="testing-infos">
             <span class="infos d-none d-md-block"> 18.09.2019 | Millau, France | Parcours</span>
             <h1>Courir de nuit</h1>
