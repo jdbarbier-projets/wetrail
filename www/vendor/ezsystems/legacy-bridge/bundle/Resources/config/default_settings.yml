@@ -1,0 +1,11 @@
+parameters:
+    # Override this with a Twig template definition to use this template as the
+    # pagelayout for legacy modules. If left null, the pagelayout from legacy is
+    # used.
+    ezpublish_legacy.default.module_default_layout: ~
+
+    # Pagelayout to use while rendering a content view in legacy
+    ezpublish_legacy.default.view_default_layout: "@@EzPublishLegacy/legacy_view_default_pagelayout.html.twig"
+
+    # Whether to use legacy mode or not. If true, will let the legacy kernel handle url aliases.
+    ezsettings.default.legacy_mode: false

@@ -1,0 +1,109 @@
+dist: trusty
+language: php
+
+env:
+  global:
+    - EZPLATFORM_REPO="https://github.com/ezsystems/ezplatform.git"
+
+services:
+  - mysql
+
+# Mysql isn't installed on trusty (only client is), so we need to specifically install it
+addons:
+  apt:
+    packages:
+    - mysql-server-5.6
+    - mysql-client-core-5.6
+    - mysql-client-5.6
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+branches:
+  only:
+    - master
+    - /^\d.\d+$/
+
+matrix:
+  fast_finish: true
+  include:
+# 7.1
+    - name: '[PHP 7.1] Unit tests'
+      php: 7.1
+      env: TEST_CONFIG="phpunit.xml"
+    - name: '[PHP 7.1] MySQL Legacy Storage Integration'
+      php: 7.1
+      env:
+        - TEST_CONFIG="phpunit-integration-legacy.xml"
+        - DB="mysql"
+        - DATABASE="mysql://root@localhost/testdb"
+# 7.2
+    - name: '[PHP 7.2] Unit tests'
+      php: 7.2
+      env: TEST_CONFIG="phpunit.xml"
+    - name: '[PHP 7.2] PostgreSQL Legacy Storage Integration'
+      php: 7.2
+      env:
+        - TEST_CONFIG="phpunit-integration-legacy.xml"
+        - DB="postgresql"
+        - DATABASE="pgsql://postgres@localhost/testdb"
+    - name: '[PHP 7.2] Solr Search Engine Integration'
+      php: 7.2
+      env:
+        - SOLR_VERSION="6.4.2"
+        - TEST_CONFIG="phpunit-integration-legacy-solr.xml"
+        - CORES_SETUP="shared"
+        - SOLR_CONFIG="vendor/ezsystems/ezplatform-solr-search-engine/lib/Resources/config/solr/schema.xml vendor/ezsystems/ezplatform-solr-search-engine/lib/Resources/config/solr/custom-fields-types.xml vendor/ezsystems/ezplatform-solr-search-engine/lib/Resources/config/solr/language-fieldtypes.xml"
+    - name: '[PHP 7.2] AdminUI Behat tests'
+      php: 7.2
+      env:
+        - COMPOSE_FILE="doc/docker/base-dev.yml:doc/docker/selenium.yml"
+        - BEHAT_OPTS="--profile=adminui --suite=richtext"
+        - SYMFONY_ENV=behat
+        - SYMFONY_DEBUG=1
+# CS check
+    - name: 'Code Style Check'
+      php: 7.2
+      env: CHECK_CS=true
+
+# reduce depth (history) of git checkout
+git:
+  depth: 30
+
+# disable mail notifications
+notifications:
+  email: false
+  slack:
+    rooms:
+      - secure: "YdZUPNm+yftOLzaaHqW8mSoDbajQa1I4KOc3cdrB/LL03E95vAIhJRJXBobvRgVdElHlIqYI/NjI6yVHRXHAWZ0du/wWkNYOBvenBRA0qEuMZaD4pl+BlylMwUKMpML72nXmcZPLDp8u9DidoaiiG4wc7h3KXu/DJC0tpSwu10A+vo1OJjToISZfteEB97OzrWSKFgfk4tXgIeyGs6EbBzpbj6Lvsk+xGaf+PAaderSFWjr7T9cx1Lc2A8E+Lu3QbI6ahdV2WxUw5B/YVvvwP8DcVS4yqyU8IZvlJpI9m5zUjFwy9puL6BiVqKAX3BXY4SoLOZcuRNIdE+Yjd0B5T0F4KWrsVgheIvAPKHoCSYlJEbBblfxLtj+1gZ06i/gn/ALP67KKcTtUzPpspF9lRoEY4IZinfhvL2hNuCgOubuham9Q+qKRk8lxRFH9WDk6EdA8rIXcN+79HrRvFJ1mcB8AkYsxRBqF2GNVrYBZui3Ksg2hXwQb1Jjakta9taBeEQOwue5GGCXJl6DpRkByPFaonGPVVAQk5PaQmvOfWGquXnTaz4xNPhnIbwMPbnn0N+DmOTmeaDuz20ngiLuD8NVy5B1GEYasDW8tTTWAcJLB2z5Mm7PDMSzaAUaaF3fvjO5b5VcJNoibxMm83akVhn1awWpw30OGbjcLd75lszY="
+    on_success: change
+    on_failure: always
+    on_pull_requests: false
+
+# setup requirements for running unit/integration/behat tests
+before_install:
+  # Disable xdebug to speed things up as we don't currently generate coverage on travis
+  - phpenv config-rm xdebug.ini
+  # Add custom php.ini configuration for test matrix
+  - echo "memory_limit=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+  - echo "default_charset=UTF-8" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+  # Detecting timezone issues by testing on random timezone
+  - TEST_TIMEZONES=("America/New_York" "Asia/Calcutta" "UTC")
+  - TEST_TIMEZONE=${TEST_TIMEZONES["`shuf -i 0-2 -n 1`"]}
+
+install:
+  # Prepare system
+  - ./bin/.travis/prepare_unittest.sh
+  - travis_retry composer install --no-progress --no-interaction --prefer-dist --no-suggest
+  # Setup Solr / Elastic search if asked for
+  - if [ "${TEST_CONFIG}" = "phpunit-integration-legacy-elasticsearch.xml" ] ; then ./bin/.travis/init_elasticsearch.sh ; fi
+  - if [ "${TEST_CONFIG}" = "phpunit-integration-legacy-solr.xml" ] ; then ./vendor/ezsystems/ezplatform-solr-search-engine/bin/.travis/init_solr.sh; fi
+  # Prepare Behat environment if needed
+  - if [ "${BEHAT_OPTS}" != "" ]; then ./bin/.travis/prepare_ezplatform.sh ; fi
+
+# execute phpunit or behat as the script command
+script:
+  - if [ "${TEST_CONFIG}" != "" ] ; then php -d date.timezone=$TEST_TIMEZONE ./vendor/bin/phpunit -c $TEST_CONFIG ; fi
+  - if [ "${CHECK_CS}" = "true" ] ; then ./vendor/bin/php-cs-fixer fix -v --dry-run --diff --show-progress=estimating; fi
+  - if [ "${BEHAT_OPTS}" != "" ]; then cd "$HOME/build/ezplatform"; docker-compose exec --user www-data app sh -c "./bin/ezbehat $BEHAT_OPTS" ; fi
