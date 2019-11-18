@@ -1,3 +1,0 @@
-fos_http_cache:
-    tags:
-        strict: true

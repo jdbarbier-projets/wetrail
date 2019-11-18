@@ -1,8 +1,0 @@
-fos_http_cache:
-
-    proxy_client:
-        nginx:
-            http:
-                servers: [ localhost ]
-
-    user_context: ~

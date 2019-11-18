@@ -1,4 +1,0 @@
-tables:
-    my_table:
-        fields:
-            data: { type: integer, nullable: true }
