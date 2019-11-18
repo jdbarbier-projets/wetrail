@@ -1,3 +1,11 @@
+imports:
+    - { resource: 'wetrail_views.yml' }
+    - { resource: 'wetrail_image.yml' }
+
+ezdesign:
+    design_list:
+        site_design: [wetrail]
+
 ezpublish:
     # HttpCache settings, By default 'local' (Symfony HttpCache Proxy), by setting it to 'http' you can point it to Varnish
     http_cache:
@@ -13,23 +21,33 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site, admin]
+        list:
+            - site
+            - admin
         groups:
-            site_group: [site]
-
-            # WARNING: Do not remove or rename this group.
-            # It's used to distinguish common siteaccesses from admin ones.
-            # In case of multisite with multiple admin panels, remember to add any additional admin siteaccess to this group.
-            admin_group: [admin]
+            site_group:
+                - site
+                - admin
+            front_group:
+                - site
+            admin_group:
+                - admin
         default_siteaccess: site
         match:
-            URIElement: 1
+            Map\Host:
+                "www.wetrail.loc": site
+                "admin.wetrail.loc": admin
+
 
     # System settings, read in following order: `default`, <siteaccess-group>, <siteacces>, and `global`
     # TIP: For multisite installations organize shared config into SiteAccess groups,
     #      on single-site you can place shared config under "default" for simplicity as shown below.
     system:
         default:
+            io:
+                permissions:
+                    files: 0666 #default is 0644
+                    directories: 0777 #default is 0755
             # Cache pool service, needs to be different per repository (database) on multi repository install.
             cache_service_name: '%cache_pool%'
             # These reflect the current installers, complete installation before you change them. For changing var_dir
@@ -45,15 +63,20 @@ ezpublish:
                 purge_servers: ['%purge_server%']
                 varnish_invalidate_token: '%varnish_invalidate_token%'
 
-        #site_group:
-        #    design: main
-
+        site_group:
+            var_dir: var/site
+            content:
+                tree_root:
+                    location_id: 2
+        front_group:
+            languages: [fre-FR]
+            design: wetrail
         admin_group:
             # System languages. Note that by default, content, content types, and other data are in eng-GB locale,
             # so removing eng-GB from this list may lead to errors or content not being shown, unless you change
             # all eng-GB data to other locales first.
             # For admin this needs to contain all languages you want to translate content to on the given repository.
-            languages: [eng-GB]
+            languages: [fre-FR, eng-GB]
             content_tree_module:
                 contextual_tree_root_location_ids:
                     - 2 # Home (Content structure)
@@ -65,14 +88,13 @@ ezpublish:
                 media: /1/43/
 
         site:
-            languages: [eng-GB]
+            languages: [fre-FR]
 
     url_alias:
         slug_converter:
             transformation: 'urlalias_lowercase'
 
 ez_platform_standard_design:
-    # makes Kernel default templates (in EzPublishCoreBundle/Resources/views) part of standard Design
     override_kernel_templates: true
 
 ez_publish_legacy:
@@ -80,5 +102,5 @@ ez_publish_legacy:
         admin_group:
             legacy_mode: true
             #view_layout: YourBundle::pagelayout.html.twig
-        site_group:
+        front_group:
             legacy_mode: false

@@ -1,0 +1,20 @@
+ezpublish:
+    system:
+        site_group:
+            image_variations:
+                embed_accommodation_314x194:
+                    filters:
+                        thumbnail:
+                            size: [314, 194]
+                            mode: outbound
+                    post_processors:
+                        jpegoptim: { strip_all: true, max: 80, progressive: true }
+                        optipng: { strip_all: true, level: 1 }
+                header_camping_thumbnail:
+                    reference: null
+                    filters:
+                    - { name: thumbnail, params: { size: [994, 560], mode: outbound } }
+                    - { name: strip }
+                    post_processors:
+                        jpegoptim: { strip_all: true, max: 80, progressive: true }
+                        optipng: { strip_all: true, level: 1 }

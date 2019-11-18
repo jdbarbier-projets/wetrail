@@ -57,6 +57,7 @@ class AppKernel extends Kernel
             // Application
 	    new AppBundle\AppBundle(),
 	    new eZ\Bundle\EzPublishLegacyBundle\EzPublishLegacyBundle( $this ),
+            new Wetrail\AppBundle\WetrailAppBundle(),
         ];
 
         switch ($this->getEnvironment()) {

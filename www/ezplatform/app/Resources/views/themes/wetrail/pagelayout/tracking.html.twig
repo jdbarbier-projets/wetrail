@@ -1,0 +1,11 @@
+{% if trackingParameters is defined and not trackingParameters is empty %}
+<script type="text/javascript">
+
+    //<![CDATA[
+    var tc_vars = {};
+{% for name, value in trackingParameters %}
+    tc_vars['{{ name }}'] = '{{ value|raw }}';
+{% endfor %}
+    //]]>
+</script>
+{% endif %}

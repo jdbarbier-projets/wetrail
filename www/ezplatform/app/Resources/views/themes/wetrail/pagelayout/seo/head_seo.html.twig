@@ -1,0 +1,11 @@
+{% block title %}
+    {% if seo is defined and seo and seo.title is defined %}
+        <title> {{ seo.title }} </title>
+    {% endif %}
+{% endblock %}
+
+{% block meta %}
+    {% if seo is defined and seo and seo.description is defined %}
+        <meta name="description" content="{{ seo.description }}">
+    {% endif %}
+{% endblock %}

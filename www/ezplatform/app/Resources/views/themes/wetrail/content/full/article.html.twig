@@ -1,0 +1,28 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% block banner %}
+<section class="banner bannermedium" style="background-image: url({{ ez_render_field(content, "header_image", {
+    "template": "fields/ez_image_src.txt.twig",
+    "parameters": { 'alias': "original" }
+}) }});">
+    <div class="content">
+        <div>
+            <h1 class="main-title">{{ ez_field_value(content, 'title') }}</h1>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="content clearbg">
+    {% if blocks is defined and blocks|length > 0 %}
+    <section class="container container-fixed toppaddedmed bottompaddedmed">
+        <div class="row">
+            {% for blockLocation in blocks %}
+            {{ render(controller("ez_content:viewAction", {"locationId": blockLocation.id, "viewType": "block"})) }}
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+</div>
+{% endblock %}
