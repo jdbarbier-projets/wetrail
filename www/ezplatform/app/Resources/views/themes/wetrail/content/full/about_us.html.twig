@@ -1,0 +1,137 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% block content %}
+    <div id="aboutUs" class="zones">
+        <div class="container container-full-width header-cover mb-0">
+            <div class="opacity-filter light"></div>
+            {% image '@WetrailAppBundle/Resources/public/img/photo-header-nous.jpg' %}
+                <img class="img-cover" src="{{ asset_url }}" alt="" />
+            {% endimage %}
+            <div class="bloc-infos">
+                <h1>À propos</h1>
+                <p class="catchline d-none d-md-block">Notre compte rendu du fameux festival des Templiers</p>
+            </div>
+        </div>
+
+        <div class="container container-medium">
+            <div class="introduction">
+                <div class="ezxml-text">
+                    <p>Trail it est un blog lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales id massa sed lobortis. Pellentesque nisi mauris, dictum quis magna a, dignissim feugiat dui. Cras sed est eu odio bibendum sagittis. Pellentesque at sem dui. Proin est nunc, vulputate sit amet facilisis a, pharetra ut purus. Sed mollis lacus massa, in consectetur arcu efficitur ac. Integer vel ligula.</p>
+                </div>
+            </div>
+
+            <div class="author row">
+                <div class="author-item item-1 bloc-left col-12 col-md-6">
+                    <h2>Alexia</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus. Aliquam vel velit dolor. Aenean velit libero, iaculis et lectus</p>
+                    <div class="author-stats">
+                        <h3>Chronos</h3>
+                        <div class="chronos-list">
+                            <div class="row">
+                                <div class="race col-6 col-md-4">5 km</div>
+                                <div class="chrono col-6 col-md-4">22'36”</div>
+                            </div>
+                            <div class="row">
+                                <div class="race col-6 col-md-4">10 km</div>
+                                <div class="chrono col-6 col-md-4">40'14”</div>
+                            </div>
+                            <div class="row">
+                                <div class="race col-6 col-md-4">Semi</div>
+                                <div class="chrono col-6 col-md-4">1h36'47”</div>
+                            </div>
+                            <div class="row">
+                                <div class="race col-6 col-md-4">Marathon</div>
+                                <div class="chrono col-6 col-md-4">3h43'12"</div>
+                            </div>
+                        </div>
+                        <div class="buttons text-uppercase text-left">
+                            <a href="#" class="btn btn-rond black padding-large strava">Strava</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="author-image item-2 bloc-right col-12 col-md-6">
+                    {% image '@WetrailAppBundle/Resources/public/img/photo-auteur-01.jpg' %}
+                        <img class="img-fluid  img-cover" src="{{ asset_url }}" alt="" />
+                    {% endimage %}
+                </div>
+                <div class="author-image item-3 bloc-left col-12 col-md-6">
+                    {% image '@WetrailAppBundle/Resources/public/img/photo-auteur-02.jpg' %}
+                        <img class="img-fluid  img-cover" src="{{ asset_url }}" alt="" />
+                    {% endimage %}
+                </div>
+                <div class="author-item item-4 bloc-right col-12 col-md-6">
+                    <h2>Jean-David</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus. Aliquam vel velit dolor. Aenean velit libero, iaculis et lectus</p>
+                    <div class="author-stats">
+                        <h3>Chronos</h3>
+                        <div class="chronos-list">
+                            <div class="row">
+                                <div class="race col-6 offset-md-5 col-md-3">5 km</div>
+                                <div class="chrono col-6 col-md-4">22'36”</div>
+                            </div>
+                            <div class="row">
+                                <div class="race col-6 offset-md-5 col-md-3">10 km</div>
+                                <div class="chrono col-6 col-md-4">40'14”</div>
+                            </div>
+                            <div class="row">
+                                <div class="race col-6 offset-md-5 col-md-3">Semi</div>
+                                <div class="chrono col-6 col-md-4">1h36'47”</div>
+                            </div>
+                            <div class="row">
+                                <div class="race col-6 offset-md-5 col-md-3">Marathon</div>
+                                <div class="chrono col-6 col-md-4">3h43'12”</div>
+                            </div>
+                        </div>
+                        <div class="buttons text-uppercase text-left">
+                            <a href="#" class="btn btn-rond black padding-large strava">Strava</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote-bloc container container-full-width image-full-width">
+            {% image '@WetrailAppBundle/Resources/public/img/photo-bandeau.jpg' %}
+                <img class="img-fluid  img-cover" src="{{ asset_url }}" alt="" />
+            {% endimage %}
+            <div class="quote">
+                <div class="text">
+                    “Rien de grand ne s’est fait sans passion”
+                    <div class="quote-author">Hegel</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container container-large instagram-container">
+        <div class="row">
+            <div class="instagram-text col-12 col-xl-4">
+                <h2>Suivez nos aventures sur Instagram</h2>
+                <span>#wetrail</span>
+                <a href="#" class="d-md-none">
+
+                    {% image '@WetrailAppBundle/Resources/public/img/logo-instagram.jpg' %}
+                        <img class="img-fluid img-cover instagram float-right" src="{{ asset_url }}" alt="" />
+                    {% endimage %}
+                </a>
+            </div>
+            <div class="instagram-images clearfix col-12 col-xl-8">
+                {% image '@WetrailAppBundle/Resources/public/img/photo-auteur-01.jpg' %}
+                    <img class="img-fluid img-cover top" src="{{ asset_url }}" alt="" />
+                {% endimage %}
+                {% image '@WetrailAppBundle/Resources/public/img//us.jpg' %}
+                    <img class="img-fluid img-cover left" src="{{ asset_url }}" alt="" />
+                {% endimage %}
+                {% image '@WetrailAppBundle/Resources/public/img/photo-auteur-02.jpg' %}
+                    <img class="img-fluid img-cover bottom" src="{{ asset_url }}" alt="" />
+                {% endimage %}
+                <a href="#" class="d-none d-md-block">
+                    {% image '@WetrailAppBundle/Resources/public/img/logo-instagram.jpg' %}
+                        <img class="img-fluid img-cover instagram" src="{{ asset_url }}" alt="" />
+                    {% endimage %}
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

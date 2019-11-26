@@ -1,0 +1,7 @@
+<link rel="shortcut icon" href="{{ asset('images/wetrail_icon.ico') }}" type="image/x-icon">
+
+{% block stylesheets %}
+    {% stylesheets '@WetrailAppBundle/Resources/public/css/*' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends "@ezdesign/pagelayout.html.twig" %}
+
+{% block content %}
+    <div class="zones">
+        <!-- Carousel -->
+        <div id="carouselHome" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                {% image '@WetrailAppBundle/Resources/public/img/test-hp.jpg' %}
+                <div class="carousel-item active" data-interval="5000" style="background-image: url({{ asset_url }}) ;">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content">
+                            <span class="infos"> 15.09.2019 | Millau, France | Trail</span>
+                            <h2>Les templiers</h2>
+                            <p class="white">Notre compte rendu du fameux festival des templiers</p>
+                            <div class="buttons">
+                                <a href="#" class="btn btn-rond">Lire l'article</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endimage %}
+                {% image '@WetrailAppBundle/Resources/public/img/test-hp02.jpg' %}
+                <div class="carousel-item" data-interval="5000" style="background-image: url({{ asset_url }});">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content">
+                            <span class="infos"> 12.05.2019 | Millau, France | Trail</span>
+                            <h2>Course du Viaduc</h2>
+                            <p class="white">Notre compte rendu de la Course Eiffage du Viaduc de Millau</p>
+                            <div class="buttons">
+                                <a href="#" class="btn btn-rond">Lire l'article</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endimage %}
+            </div>
+            <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="container container-medium presentation animated">
+        {% image '@WetrailAppBundle/Resources/public/img/us.jpg' %}
+            <img class="presentation-image img-cover" src="{{ asset_url }}" />
+        {% endimage %}
+        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor vehicula enim, sit amet suscipit nisl mollis a. Vivamus iaculis sagittis mollis. Quisque sit amet nibh sit amet lacus posuere accumsan. Praesent hendrerit laoreet eros ac tristique. Nulla facilisi. Sed congue lorem condimentum neque vehicula volutpat. Praesent interdum quam vel lorem luctus tristique. Integer sed ex nec massa efficitur euismod.</p>
+        <div class="buttons text-uppercase">
+            <a href="#" class="btn btn-rond black padding-large">Qui sommes nous ?</a>
+        </div>
+    </div>
+
+    <div id="topics" class="container container-large animated">
+        <h2>Sujets</h2>
+        <div class="row">
+            <div class="topic-item col-6 col-sm-3">
+                <a href="#" class="thumbnail">
+                    {% image '@WetrailAppBundle/Resources/public/img/light_stairs_nature.jpg' %}
+                    <img class="img-cover" alt="" src="{{ asset_url }}" />
+                    {% endimage %}
+                    <span>Trails</span>
+                </a>
+            </div>
+            <div class="topic-item col-6 col-sm-3">
+                <a href="#" class="thumbnail">
+                    {% image '@WetrailAppBundle/Resources/public/img/trail_bag.jpg' %}
+                        <img class="img-cover" alt="" src="{{ asset_url }}" />
+                    {% endimage %}
+                    <span>Équipements</span>
+                </a>
+            </div>
+            <div class="topic-item col-6 col-sm-3">
+                <a href="#" class="thumbnail">
+                    {% image '@WetrailAppBundle/Resources/public/img/deadlift.jpg' %}
+                        <img class="img-cover" alt="" src="{{ asset_url }}" />
+                    {% endimage %}
+                    <span>Entrainements</span>
+                </a>
+            </div>
+            <div class="topic-item col-6 col-sm-3">
+                <a href="#" class="thumbnail">
+                    {% image '@WetrailAppBundle/Resources/public/img/healthy_food.jpg' %}
+                        <img class="img-cover" alt="" src="{{ asset_url }}" />
+                    {% endimage %}
+                    <span>Alimentation</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="latestsPosts" class="container container-full-width">
+        <h2>Nos derniers posts</h2>
+        <div class="row">
+            {% image '@WetrailAppBundle/Resources/public/img/trail_batons.jpg' %}
+            <div class="post-item col-12 col-md-7 col-xl-8" style="background-image: url( {{ asset_url }} );">
+                <div class="content"></div>
+                <div class="details">
+                    <span class="infos"> 15.09.2019 | Millau, France | Trail</span>
+                    <h3><a href="#">Trail de Saint-Guilhem</a></h3>
+                    <p class="white">Notre compte rendu du fameux festival des templiers</p>
+                </div>
+            </div>
+            {% endimage %}
+            {% image '@WetrailAppBundle/Resources/public/img/trail_soleil.jpg' %}
+            <div class="post-item col-12 col-md-5 col-xl-4" style="background-image: url( {{ asset_url }} );">
+                <div class="content"></div>
+                <div class="details">
+                    <span class="infos"> 15.09.2019 | Alès, France | Trail</span>
+                    <h3><a href="#">Trail de Canabias</a></h3>
+                    <p class="white">Notre compte rendu du fameux festival des templiers</p>
+                </div>
+            </div>
+            {% endimage %}
+        </div>
+        <div class="row">
+            {% image '@WetrailAppBundle/Resources/public/img/food.jpg' %}
+            <div class="post-item col-md-5 col-xl-4" style="background-image: url( {{ asset_url }} ) ;">
+                <div class="content"></div>
+                <div class="details">
+                    <span class="infos"> 17.04.2019 | Mireval, France | Trail</span>
+                    <h3><a href="#">Trail de Mireval</a></h3>
+                    <p class="white">Notre compte rendu du fameux festival des templiers</p>
+                </div>
+            </div>
+            {% endimage %}
+            {% image '@WetrailAppBundle/Resources/public/img/traileur.jpg' %}
+            <div class="post-item col-12 col-md-7 col-xl-8" style="background-image: url( {{ asset_url }} );">
+                <div class="content"></div>
+                <div class="details">
+                    <span class="infos"> 22.11.2019 | Montpellier, France | Route</span>
+                    <h3><a href="#">10km de Montpellier</a></h3>
+                    <p class="white">Notre compte rendu du fameux festival des templiers</p>
+                </div>
+            </div>
+            {% endimage %}
+        </div>
+        <div class="row">
+            {% image '@WetrailAppBundle/Resources/public/img/black_food.jpg' %}
+            <div class="post-item col-12 col-md-7 col-xl-8" style="background-image: url( {{ asset_url }} ) ;">
+                <div class="content"></div>
+                <div class="details">
+                    <span class="infos"> 18.01.2020 | Angkor, Cambodge | Trail</span>
+                    <h3><a href="#">Trail des temples d'Angkor</a></h3>
+                    <p class="white">Notre compte rendu du fameux festival des templiers</p>
+                </div>
+            </div>
+            {% endimage %}
+            {% image '@WetrailAppBundle/Resources/public/img/race-india.jpg' %}
+            <div class="post-item col-12 col-md-5 col-xl-4" style="background-image: url( {{ asset_url }} ) ;">
+                <div class="content"></div>
+                <div class="details">
+                    <span class="infos"> 15.09.2019 | Alès, France | Trail</span>
+                    <h3><a href="#">Trail de Canabias</a></h3>
+                    <p class="white">Notre compte rendu du fameux festival des templiers</p>
+                </div>
+            </div>
+            {% endimage %}
+        </div>
+    </div>
+{% endblock %}

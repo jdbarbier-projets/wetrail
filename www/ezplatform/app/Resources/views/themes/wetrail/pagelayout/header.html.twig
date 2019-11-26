@@ -1,0 +1,23 @@
+{% block header %}
+
+    <div class="overlay"></div>
+
+    <div class="fixed-top navbar navbar-light bg-white bg-sm-transparent navbar-static-top navbar-expand-lg">
+        <div class="container container-large container-full-width-laptop menu">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">☰</button>
+            <a class="navbar-brand" href="{{ path( ezpublish.rootLocation ) }}">
+                {% image '@WetrailAppBundle/Resources/public/img/logo-we-trail.svg' %}
+                <img class="wetrail-logo d-none d-lg-block" src="{{ asset_url }}" alt="weTrail">
+                {% endimage %}
+                {% image '@WetrailAppBundle/Resources/public/img/logo_wetrail_blanc.svg' %}
+                <img class="wetrail-logo-white d-block d-lg-none" src="{{ asset_url }}" alt="weTrail">
+                {% endimage %}
+            </a>
+            <div class="clearfix d-block d-lg-none"></div>
+            <div id="navbarCollapse" class="navbar-collapse collapse navbar-right">
+                {{ render_esi(controller("WetrailAppBundle:Pagelayout:menu")) }}
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

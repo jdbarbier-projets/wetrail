@@ -1,0 +1,61 @@
+{% set firstLevelImagesCollections = {
+    57: '/bundles/wetrailapp/img/img-menu-mobile-trail.jpg',
+    58: '/bundles/wetrailapp/img/img-menu-mobile-equipement.jpg',
+    59: '/bundles/wetrailapp/img/img-menu-mobile-entrainement.jpg',
+    60: '/bundles/wetrailapp/img/img-menu-mobile-alimentation.jpg'
+} %}
+
+{% set secondLevelImagesCollections = {
+    61: '/bundles/wetrailapp/img/img_menu_trail02.jpg',
+    62: '/bundles/wetrailapp/img/img_menu_course02.jpg',
+    65: '/bundles/wetrailapp/img/img_menu_equipement_chaussure.jpg',
+    67: '/bundles/wetrailapp/img/img_menu_equipement_technologie.jpg',
+    69: '/bundles/wetrailapp/img/img_menu_equipement_accessoires.jpg',
+    71: '/bundles/wetrailapp/img/img_menu_seances.jpg',
+    73: '/bundles/wetrailapp/img/img_menu_entrainement_renfo.jpg',
+    75: '/bundles/wetrailapp/img/img_menu_entrainement_recup.jpg',
+    84: '/bundles/wetrailapp/img/img_menu_alimentation_recettes.jpg',
+    79: '/bundles/wetrailapp/img/img_menu_alimentation_nutrition.jpg'
+} %}
+
+
+<ul class="nav navbar-nav">
+    {% for firstLevelMenu in firstLevelMenuItems %}
+        <li class="dropdown menu-large nav-item">
+            <div class="nav-item-content">
+                <img class="img-fluid menu-mobile-image d-block d-lg-none" alt="" src="{{ firstLevelImagesCollections[firstLevelMenu.id] }}" />
+
+                <a href="{{ path(firstLevelMenu) }}" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                    {{ ez_content_name( firstLevelMenu.contentInfo ) }}
+                    {% image '@WetrailAppBundle/Resources/public/img/picto_fleche_menu.svg' %}
+                        <img class="d-none" src="{{ asset_url }}" alt="" />
+                    {% endimage %}
+                    {% image '@WetrailAppBundle/Resources/public/img/picto_fleche_menu_light_grey.svg' %}
+                        <img src="{{ asset_url }}" alt="" />
+                    {% endimage %}
+                </a>
+
+                <ul class="dropdown-menu megamenu">
+                    <li class="dropdown-item container container-large container-full-width-tablet no-margin">
+                        <div class="row">
+                            {% for secondLevelMenu in secondLevelMenuItems[firstLevelMenu.id] %}
+                            <div class="col-12 col-md-6 col-lg-3 text-center">
+                                <div class="card">
+                                    <a href="{{ path(secondLevelMenu) }}" class="thumbnail">
+                                            <img class="img-cover d-none d-lg-block" alt="" src="{{ secondLevelImagesCollections[secondLevelMenu.id] }}" />
+                                        <span>{{ ez_content_name( secondLevelMenu.contentInfo ) }}</span>
+                                        <div class="button d-none d-lg-block">
+                                            <div class="btn-rond black">Découvrir nos avis</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </li>
+    {% endfor %}
+</ul>

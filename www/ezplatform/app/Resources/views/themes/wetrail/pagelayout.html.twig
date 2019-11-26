@@ -1,0 +1,36 @@
+{% if location is defined %}
+    {% set currentLocation = location %}
+{% else %}
+    {% set currentLocation = null %}
+{% endif %}
+
+<!DOCTYPE html>
+<!--[if lt IE 9 ]>
+<html class="unsupported-ie ie" lang=""><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang=""><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="" prefix="og: http://ogp.me/ns#" xmlns:hx="http://purl.org/NET/hinclude">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include '@ezdesign/seo/head_seo.html.twig' %}
+    {% include '@ezdesign/pagelayout/head_styles.html.twig' %}
+
+    {% block microdata %}
+    {% endblock %}
+</head>
+<body>
+
+    {% include '@ezdesign/pagelayout/header.html.twig' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include '@ezdesign/pagelayout/footer.html.twig' %}
+
+    {% include '@ezdesign/pagelayout/footer_scripts.html.twig' %}
+</body>
+</html>

@@ -1,0 +1,85 @@
+ezpublish:
+    system:
+        front_group:
+            content_view:
+                full:
+                    about_us:
+                        template: "@ezdesign/content/full/about_us.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/AboutUs:full"
+                        match:
+                            Identifier\ContentType:
+                                - about_us
+                    article:
+                        template: "@ezdesign/content/full/article.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/Article:full"
+                        match:
+                            Identifier\ContentType:
+                                - article
+                    homepage:
+                        template: "@ezdesign/content/full/homepage.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/Homepage:full"
+                        match:
+                            Identifier\ContentType:
+                                - homepage
+                    folder:
+                        template: "@ezdesign/index.html.twig"
+                        controller: "WetrailAppBundle:Default"
+                        match:
+                            Identifier\ContentType:
+                                - folder
+                    itinerary:
+                        template: "@ezdesign/content/full/itinerary.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/Itinerary:full"
+                        match:
+                            Identifier\ContentType:
+                                - itinerary
+                    race:
+                        template: "@ezdesign/content/full/race.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/Race:full"
+                        match:
+                            Identifier\ContentType:
+                                - race
+                    recipe:
+                        template: "@ezdesign/content/full/recipe.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/Recipe:full"
+                        match:
+                            Identifier\ContentType:
+                                - recipe
+                    rubric_list:
+                        template: "@ezdesign/content/full/rubric_list.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/RubricList:full"
+                        match:
+                            Identifier\ContentType:
+                                - rubric_trails
+                                - rubric_itineraries
+                                - rubric_races
+                                - rubric_trainings
+                                - rubric_courses
+                                - rubric_equipments
+                                - rubric_nutrition
+                                - rubric_shoes
+                                - rubric_accessories
+                                - rubric_clothes
+                                - subrubric
+                    test_accessory:
+                        template: "@ezdesign/content/full/test_accessory.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/TestAccessory:full"
+                        match:
+                            Identifier\ContentType:
+                                - test_accessory
+                    test_clothe:
+                        template: "@ezdesign/content/full/test_clothe.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/TestClothe:full"
+                        match:
+                            Identifier\ContentType:
+                                - test_clothe
+                    test_shoe:
+                        template: "@ezdesign/content/full/test_shoe.html.twig"
+                        controller: "WetrailAppBundle:ContentViewController/TestShoe:full"
+                        match:
+                            Identifier\ContentType:
+                                - test_shoe
+                    default:
+                        template: "@ezdesign/errors/404.html.twig"
+                        controller: "WetrailAppBundle:Default:index"
+                        match: ~

@@ -1,0 +1,48 @@
+ezpublish:
+    system:
+        default:
+            content_type:
+                folder:
+                    thumbnail: /bundles/wetrailapp/img/bo_icons/folder.svg
+                homepage:
+                    thumbnail: /bundles/wetrailapp/img/bo_icons/home-folder.svg
+                rubric_trails:
+                    thumbnail: /assets/images/bo_icons/menu.png
+                rubric_itinerary:
+                    thumbnail: /assets/images/bo_icons/map-circle.png
+                itinerary:
+                    thumbnail: /assets/images/bo_icons/destinations.png
+                rubric_race:
+                    thumbnail: /assets/images/bo_icons/podium-red.png
+                race:
+                    thumbnail: /assets/images/bo_icons/tournament_departures_page.png
+                rubric_training:
+                    thumbnail: /assets/images/bo_icons/menu.png
+                subrubric:
+                    thumbnail: /assets/images/bo_icons/articles_rubric.png
+                article:
+                    thumbnail: /assets/images/bo_icons/page.png
+                rubric_equipments:
+                    thumbnail: /assets/images/bo_icons/menu.png
+                rubric_shoes:
+                    thumbnail: /assets/images/bo_icons/folder-man.png
+                shoe_test:
+                    thumbnail: /assets/images/bo_icons/footer.png
+                rubric_clothes:
+                    thumbnail: /assets/images/bo_icons/member.png
+                clothes:
+                    thumbnail: /assets/images/bo_icons/honoris_causa_member.png
+                rubric_accessories:
+                    thumbnail: /assets/images/bo_icons/folder_bookmark.png
+                accessory:
+                    thumbnail: /assets/images/bo_icons/label.png
+                rubric_nutrition:
+                    thumbnail: /assets/images/bo_icons/menu.png
+                about_us:
+                    thumbnail: /assets/images/bo_icons/family.png
+                contact:
+                    thumbnail: /assets/images/bo_icons/form.png
+                file:
+                    thumbnail: /assets/images/bo_icons/file_bloc.png
+                image:
+                    thumbnail: /assets/images/bo_icons/image_simple.png
