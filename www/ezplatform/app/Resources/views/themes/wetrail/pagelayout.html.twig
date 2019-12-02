@@ -29,7 +29,7 @@
     {% block content %}
     {% endblock %}
 
-    {% include '@ezdesign/pagelayout/footer.html.twig' %}
+    {{ render_esi(controller("WetrailAppBundle:Pagelayout:footer")) }}
 
     {% include '@ezdesign/pagelayout/footer_scripts.html.twig' %}
 </body>

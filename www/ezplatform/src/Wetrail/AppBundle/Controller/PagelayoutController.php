@@ -36,6 +36,15 @@ class PagelayoutController extends Controller
      */
     public function footerAction(  )
     {
+        $firstLevelMenuItems = $this->fetchHelper->fetchChildren( $this->getRootLocation()->id, self::MENU_CLASSES, 4);
+        $aboutUsPage = $this->fetchHelper->fetchChildren( $this->getRootLocation()->id,  "about_us", 1);
+
+
+        $params = [
+            "firstLevelMenuItems" => $firstLevelMenuItems,
+            "aboutUsPage" => $aboutUsPage[0]
+        ];
+        return $this->render("@ezdesign/pagelayout/footer.html.twig", $params);
     }
     /**
      * Action qui sert le menu du site
