@@ -3,29 +3,29 @@
 @font-face {
   font-family: 'ProximaNova';
   src: url('../bundles/wetrailapp/fonts/ProximaNova-Regular.eot');
-  src: url('../bundles/wetrailapp/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../bundles/wetrailapp/fonts/ProximaNova-Regular.ttf') format('truetype'), url('../bundles/wetrailapp/fonts/ProximaNova-Regular.woff') format('woff');
+  src: url('../bundles/wetrailapp/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../bundles/wetrailapp//fonts/ProximaNova-Regular.ttf') format('truetype'), url('../bundles/wetrailapp//fonts/ProximaNova-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'ProximaNova';
   src: url('../bundles/wetrailapp/fonts/ProximaNova-Extrabld.eot');
-  src: url('../bundles/wetrailapp/fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'), url('../bundles/wetrailapp/fonts/ProximaNova-Extrabld.ttf') format('truetype'), url('../bundles/wetrailapp/fonts/ProximaNova-Extrabld.woff') format('woff');
+  src: url('../bundles/wetrailapp/fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'), url('../bundles/wetrailapp//fonts/ProximaNova-Extrabld.ttf') format('truetype'), url('../bundles/wetrailapp//fonts/ProximaNova-Extrabld.woff') format('woff');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'ProximaNova';
   src: url('../bundles/wetrailapp/fonts/ProximaNova-Bold.eot');
-  src: url('../bundles/wetrailapp/fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../bundles/wetrailapp/fonts/ProximaNova-Bold.ttf') format('truetype'), url('../bundles/wetrailapp/fonts/ProximaNova-Bold.woff') format('woff');
+  src: url('../bundles/wetrailapp/fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../bundles/wetrailapp//fonts/ProximaNova-Bold.ttf') format('truetype'), url('../bundles/wetrailapp//fonts/ProximaNova-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 /* QuestaGrande */
 @font-face {
   font-family: 'QuestaGrande';
-  src: url('../bundles/wetrailapp/fonts/QuestaGrande-Regular.eot');
-  src: url('../bundles/wetrailapp/fonts/QuestaGrande-Regular.eot?#iefix') format('embedded-opentype'), url('../bundles/wetrailapp/fonts/QuestaGrande-Regular.ttf') format('truetype'), url('../bundles/wetrailapp/fonts/QuestaGrande-Regular.woff') format('woff');
+  src: url('bundles/wetrailapp/fonts/QuestaGrande-Regular.eot');
+  src: url('bundles/wetrailapp/fonts/QuestaGrande-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/QuestaGrande-Regular.ttf') format('truetype'), url('../fonts/QuestaGrande-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -610,6 +610,10 @@ body {
   position: relative;
   margin-top: 0px;
 }
+.zones .header-cover.full-height {
+  height: 100vh;
+}
+.zones .header-cover figure,
 .zones .header-cover img {
   height: 100%;
   width: 100%;
@@ -1108,10 +1112,6 @@ body {
   margin: 0px -15px;
 }
 /*=== Page ABOUT ===*/
-#aboutUs .header-cover {
-  height: 100vh;
-  margin-top: 0px;
-}
 #aboutUs .header-cover .bloc-infos {
   bottom: 45%;
 }
@@ -1802,7 +1802,7 @@ body {
 .page-summary .container {
   margin: 0 auto;
 }
-.page-summary .container .content-summary {
+.page-summary .container ul {
   color: #919191;
   line-height: 1.5em;
   font-size: 1.125em;
@@ -1810,7 +1810,7 @@ body {
   padding-left: 0px;
   margin-bottom: 0px;
 }
-.page-summary .container .content-summary li:before {
+.page-summary .container ul li:before {
   content: "\2022";
   font-weight: bold;
   font-size: 1em;
@@ -1818,7 +1818,7 @@ body {
   width: 1.25em;
   color: #FF428D;
 }
-.page-summary .container .content-summary li a {
+.page-summary .container ul li a {
   color: #919191;
   line-height: 2em;
 }
@@ -2334,4 +2334,3 @@ html[xmlns] .clearfix {
     box-shadow: none !important;
   }
 }
-/*# sourceMappingURL=style.css.map */

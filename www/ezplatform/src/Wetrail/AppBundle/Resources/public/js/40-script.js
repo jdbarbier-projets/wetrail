@@ -106,7 +106,7 @@ $(document).ready(function(){
     });
 
     // Smooth scroll when clicking on anchors
-    $( "a.scroll-anchor" ).click(function( event ) {
+    $( ".page-summary .content-summary li a" ).click(function( event ) {
         event.preventDefault();
         var anchorPosition = $($(this).attr("href")).offset().top - ($('.fixed-top').height() + 20 );
         $("html, body").animate({ scrollTop: anchorPosition }, 1000);

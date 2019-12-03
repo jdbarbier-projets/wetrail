@@ -636,7 +636,10 @@ body {
     padding: 0px;
     position: relative;
     margin-top: 0px;
-    img {
+    &.full-height {
+      height: 100vh;
+    }
+    figure, img {
       height: 100%;
       width: 100%;
     }
@@ -1128,8 +1131,6 @@ body {
 /*=== Page ABOUT ===*/
 #aboutUs {
   .header-cover {
-    height: 100vh;
-    margin-top: 0px;
     .bloc-infos {
       bottom: 45%;
       h1 {
@@ -1776,7 +1777,7 @@ body {
   margin: 0 auto;
   .container {
     margin: 0 auto;
-    .content-summary {
+    ul {
       color: @lightgrey;
       line-height: 1.5em;
       font-size: 1.125em;

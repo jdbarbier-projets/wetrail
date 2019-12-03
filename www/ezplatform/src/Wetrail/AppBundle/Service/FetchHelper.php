@@ -2,6 +2,8 @@
 
 namespace Wetrail\AppBundle\Service;
 
+use eZ\Publish\API\Repository\ContentService;
+use eZ\Publish\API\Repository\LocationService;
 use eZ\Publish\API\Repository\Repository;
 use eZ\Publish\API\Repository\SearchService;
 use eZ\Publish\API\Repository\Values\Content\Location;
@@ -17,10 +19,12 @@ class FetchHelper
 
     CONST MAX_LIMIT = 999999;
 
-    public function __construct(Repository $repository, SearchService $searchService)
+    public function __construct(Repository $repository, SearchService $searchService, LocationService $locationService, ContentService $contentService)
     {
         $this->repository = $repository;
         $this->searchService = $searchService;
+        $this->locationService = $locationService;
+        $this->contentService = $contentService;
     }
 
     /**
@@ -87,5 +91,23 @@ class FetchHelper
             $items[] = $item->valueObject;
         }
         return $items;
+    }
+
+    /**
+     * @param Location $currentLocation
+     * @param array $mainRubricClassesList
+     *
+     * @return Location
+     *
+     * @throws \eZ\Publish\API\Repository\Exceptions\InvalidArgumentException
+     */
+    public function getMainRubric($currentLocation, $mainRubricClassesList)
+    {
+        $mainRubric = $currentLocation;
+        $currentContent = $this->contentService->loadContentByContentInfo( $currentLocation->getContentInfo() );
+        if ( !in_array( $currentContent->getContentType()->identifier, $mainRubricClassesList )) {
+            $mainRubric = $this->locationService->loadLocation( $currentLocation->parentLocationId );
+        }
+        return $mainRubric;
     }
 }

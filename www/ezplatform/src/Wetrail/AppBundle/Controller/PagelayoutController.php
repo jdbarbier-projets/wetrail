@@ -21,6 +21,7 @@ class PagelayoutController extends Controller
             'rubric_shoes',
             'rubric_clothes',
             'rubric_accessories',
+            'rubric_advises',
             'subrubric',
             'rubric_recipes'
         );

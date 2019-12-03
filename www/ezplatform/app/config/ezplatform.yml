@@ -73,6 +73,10 @@ ezpublish:
         front_group:
             design: wetrail_design
             languages: [fre-FR]
+            user_preferences:
+                short_datetime_format:
+                    date_format: 'dd.MM.yyyy'
+                    time_format: ''
             content:
                 tree_root:
                     location_id: 54

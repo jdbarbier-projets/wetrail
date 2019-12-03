@@ -2,89 +2,44 @@
 
 {% block content %}
 <div id="parcours" class="zones">
-    <div class="container container-full-width header-cover mb-0">
+    <div class="container container-full-width header-cover full-height mb-0">
         <div class="opacity-filter light"></div>
-        {% image '@WetrailAppBundle/Resources/public/img/test-image-cover.jpg' %}
-        <img class="img-cover" src="{{ asset_url }}" alt="" />
-        {% endimage %}
+
+        {{ ez_render_field( content, 'image', { parameters: { 'alias': 'original', 'class': 'img-cover' } } ) }}
+
         <div class="testing-infos">
-            <span class="infos d-none d-md-block"> 18.09.2019 | Millau, France | Parcours</span>
-            <h1>Courir de nuit</h1>
-            <p class="d-none d-md-block">Commencer, les bénéfices, comment rester en sécurité</p>
+            <span class="infos d-none d-md-block">{{ content.versionInfo.creationDate|ez_short_datetime }} | Millau, France | Parcours</span>
+            <h1>{{ ez_content_name( location.contentInfo ) }}</h1>
+            {% if content.fields['catchphrase'] is defined and not ez_is_field_empty(content, 'catchphrase') %}
+                <p class="d-none d-md-block">{{ ez_field_value(content, 'catchphrase') }}</p>
+            {% endif %}
         </div>
     </div>
 
+    {% if content.fields['intro'] is defined and not ez_is_field_empty(content, 'intro') %}
     <div class="container container-rich-text">
         <div class="introduction">
-            <div class="ezxml-text">
-                <p>Courir de nuit présente beaucoup plus de risques que de courir de jour. Cependant, il y a beaucoup de bénéfices à courir dans la pénombre, dont beaucoup qui restent inconnus et insoupconnés. Votre sécurité est liée au choix de votre équipement. Dans cet article nous vous expliquons : </p>
-            </div>
+            {{ ez_render_field(content, 'intro') }}
         </div>
     </div>
+    {% endif %}
 
+    {% if content.fields['table_of_content'] is defined and not ez_is_field_empty(content, 'table_of_content') %}
     <div class="page-summary container container-full-width">
-        <div class="container container-rich-text">
-            <ul class="content-summary">
-                <li><a class="scroll-anchor" href="#pourquoi-courir-de-nuit">Pourquoi courir de nuit ? Les bénéfices.</a></li>
-                <li><a class="scroll-anchor" href="#dangers-courir-nuit">Les dangers de courir la nuit</a></li>
-                <li><a class="scroll-anchor" href="#comment-courir-nuit">Comment courir de nuit</a></li>
-                <li><a class="scroll-anchor" href="#comment-courir-nuit">Les essentiels pour courir de nuit en sécurité</a></li>
-            </ul>
+        <div class="content-summary container container-rich-text">
+            {{ ez_render_field(content, 'table_of_content') }}
         </div>
     </div>
+    {% endif %}
 
+
+    {% if content.fields['content'] is defined and not ez_is_field_empty(content, 'content') %}
     <div class="container container-rich-text">
         <div class="content">
-            <div class="ezxml-text">
-                <h2 id="pourquoi-courir-de-nuit">Pourquoi courir de nuit ?</h2>
-                <h3>Les bénéfices.</h3>
-                <ul>
-                    <li><strong>Moins de distraction.</strong> Il est plus facile de décompresser en fin de journée, sans avoir d’autres choses à faire après. Cela permet aussi une meilleure concentration et beaucoup plus de calmes afin de se retrouver proche de la nature.</li>
-                    <li><strong>Une température plus agréable !</strong> Si vous habitez dans le sud de la France ou souffrez d’un épisode caniculaire en plein été vous comprendrez rapidement les avantages de courir la nuit. C’est une façon de retrouver de bonnes sensations sans essouflements ou coups de soleil.</li>
-                </ul>
-                <p>Vivamus fringilla leo arcu, quis auctor quam aliquam sed. Quisque risus odio, placerat non accumsan id, porta a magna. Sed sollicitudin, libero et suscipit sollicitudin, risus leo tristique ligula, vitae finibus est mauris in urna. Nam bibendum luctus nulla, pretium pharetra purus convallis id. Nam tempus, nunc hendrerit consequat ornare, sem mauris venenatis lectus, a mollis lacus sem a mauris. Curabitur eget bibendum eros. Donec suscipit pellentesque</p>
-
-                <div class="multiple-quote">
-                    <div class="border-top-quote"></div>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elit At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                </div>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus. Aliquam vel velit dolor. Aenean velit libero, iaculis et lectus volutpat, scelerisque gravida massa. Quisque scelerisque nibh ut felis elementum, vitae viverra augue porta. Praesent congue eu lorem lobortis cursus. Etiam ac augue molestie, fermentum est nec, tincidunt urna. Morbi vel elementum purus.</p>
-
-
-                <h2 id="dangers-courir-nuit">Les dangers de courir la nuit</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus.</p>
-
-                <h3>1. Une frontale de qualité</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus. Aliquam vel velit dolor. Aenean velit libero, iaculis et lectus volutpat, scelerisque gravida massa. Quisque scelerisque nibh ut felis elementum, vitae viverra augue porta. Praesent congue eu lorem lobortis cursus. Etiam ac augue molestie, fermentum est nec, tincidunt urna. Morbi vel elementum purus.</p>
-
-                <div class="object image-embed">
-                    {% image '@WetrailAppBundle/Resources/public/img/situation-frontale.jpg' %}
-                        <img class="img-fluid img-cover" src="{{ asset_url }}" alt="" />
-                    {% endimage %}
-                </div>
-
-                <div class="embed-button">
-                    <div class="buttons text-uppercase text-center">
-                        <a href="#" class="btn btn-rond black">Voire notre test complet sur la petzl Bindi</a>
-                    </div>
-                </div>
-
-                <h3 id="comment-courir-nuit">2. Des vêtements réfléchissants</h3>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus. Aliquam vel velit dolor. Aenean velit libero, iaculis et lectus volutpat, scelerisque gravida massa. Quisque scelerisque nibh ut felis elementum, vitae viverra augue porta. Praesent congue eu lorem lobortis cursus. Etiam ac augue molestie, fermentum est nec, tincidunt urna. Morbi vel elementum purus.</p>
-
-                <div class="object image-embed">
-                    {% image '@WetrailAppBundle/Resources/public/img/coureur-concentre.jpg' %}
-                        <img class="img-fluid img-cover" src="{{ asset_url }}" alt="" />
-                    {% endimage %}
-                </div>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquam lobortis justo, vel cursus sapien. Morbi vel porttitor libero. Sed et maximus turpis. Maecenas consequat, augue nec suscipit interdum, sem nulla congue ante, eget convallis dolor enim eget tellus. Aliquam vel velit dolor. Aenean velit libero, iaculis et lectus volutpat, scelerisque gravida massa. Quisque scelerisque nibh ut felis elementum, vitae viverra augue porta. Praesent congue eu lorem lobortis cursus. Etiam ac augue molestie, fermentum est nec, tincidunt urna. Morbi vel elementum purus.</p>
-            </div>
+            {{ ez_render_field(content, 'content') }}
         </div>
     </div>
+    {% endif %}
 
     <div class="container container-medium">
         <div class="article-author row">

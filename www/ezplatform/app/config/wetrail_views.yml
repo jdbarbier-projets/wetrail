@@ -50,6 +50,7 @@ ezpublish:
                         controller: "WetrailAppBundle:ContentViewController/RubricList:full"
                         match:
                             Identifier\ContentType:
+                                - rubric_advises
                                 - rubric_trails
                                 - rubric_itineraries
                                 - rubric_races
